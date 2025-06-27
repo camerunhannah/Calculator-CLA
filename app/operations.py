@@ -1,6 +1,7 @@
+
 from abc import ABC, abstractmethod
 import math
-from app.exceptions import OperationError 
+from app.exceptions import OperationError # Import the custom OperationError
 
 class Operation(ABC):
     """Abstract base class for all calculator operations."""
@@ -69,6 +70,7 @@ class NthRoot(Operation):
             raise OperationError("Cannot calculate even root of a negative number.")
         return self.operand_a ** (1 / self.operand_b)
 
+   
     def get_name(self) -> str:
         return "root"
 
@@ -79,3 +81,41 @@ class Hypotenuse(Operation):
 
     def get_name(self) -> str:
         return "hypotenuse"
+
+class Modulus(Operation):
+    """Modulus operation (remainder of operand_a / operand_b)."""
+    def execute(self) -> float:
+        if self.operand_b == 0:
+            raise OperationError("Modulus by zero is not allowed.")
+        return self.operand_a % self.operand_b
+
+    def get_name(self) -> str:
+        return "modulus"
+
+class IntegerDivision(Operation):
+    """Integer Division operation (floor division of operand_a / operand_b)."""
+    def execute(self) -> float:
+        if self.operand_b == 0:
+            raise OperationError("Integer division by zero is not allowed.")
+        return self.operand_a // self.operand_b
+
+    def get_name(self) -> str:
+        return "int_divide"
+
+class Percentage(Operation):
+    """Percentage calculation (operand_a as a percentage of operand_b: (a / b) * 100)."""
+    def execute(self) -> float:
+        if self.operand_b == 0:
+            raise OperationError("Percentage calculation with zero as base is not allowed.")
+        return (self.operand_a / self.operand_b) * 100
+
+    def get_name(self) -> str:
+        return "percent"
+
+class AbsoluteDifference(Operation):
+    """Calculates the absolute difference between two numbers: |operand_a - operand_b|."""
+    def execute(self) -> float:
+        return abs(self.operand_a - self.operand_b)
+
+    def get_name(self) -> str:
+        return "abs_diff"

@@ -1,6 +1,8 @@
-# app/operation_factory.py
 
-from app.operations import Add, Subtract, Multiply, Divide, Power, NthRoot, Hypotenuse
+from app.operations import (
+    Add, Subtract, Multiply, Divide, Power, NthRoot, Hypotenuse,
+    Modulus, IntegerDivision, Percentage, AbsoluteDifference 
+)
 
 class OperationFactory:
     """
@@ -14,6 +16,10 @@ class OperationFactory:
         "power": Power,
         "root": NthRoot,
         "hypotenuse": Hypotenuse,
+        "modulus": Modulus,
+        "int_divide": IntegerDivision,
+        "percent": Percentage,
+        "abs_diff": AbsoluteDifference,
     }
 
     @classmethod

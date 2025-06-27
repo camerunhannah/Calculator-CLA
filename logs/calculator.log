@@ -210,3 +210,12 @@
 2025-06-26 23:03:16,638 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
 2025-06-26 23:03:16,638 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
 2025-06-26 23:03:16,638 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
+2025-06-27 10:17:43,315 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-27 10:17:43,356 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
+2025-06-27 10:17:43,356 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
+2025-06-27 10:17:43,356 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
+2025-06-27 10:17:43,356 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
+2025-06-27 10:17:43,544 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
+2025-06-27 10:17:43,544 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
+2025-06-27 10:17:43,545 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
+2025-06-27 10:17:43,545 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
