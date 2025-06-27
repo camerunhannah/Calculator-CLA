@@ -1,7 +1,6 @@
-# app/operations.py
-
 from abc import ABC, abstractmethod
 import math
+from app.exceptions import OperationError 
 
 class Operation(ABC):
     """Abstract base class for all calculator operations."""
@@ -47,7 +46,7 @@ class Divide(Operation):
     """Division operation."""
     def execute(self) -> float:
         if self.operand_b == 0:
-            raise ValueError("Division by zero is not allowed.")
+            raise OperationError("Division by zero is not allowed.")
         return self.operand_a / self.operand_b
 
     def get_name(self) -> str:
@@ -65,9 +64,9 @@ class NthRoot(Operation):
     """Nth Root operation (the operand_b-th root of operand_a)."""
     def execute(self) -> float:
         if self.operand_b == 0:
-            raise ValueError("Root degree cannot be zero.")
+            raise OperationError("Root degree cannot be zero.")
         if self.operand_a < 0 and self.operand_b % 2 == 0:
-            raise ValueError("Cannot calculate even root of a negative number.")
+            raise OperationError("Cannot calculate even root of a negative number.")
         return self.operand_a ** (1 / self.operand_b)
 
     def get_name(self) -> str:

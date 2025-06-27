@@ -1,10 +1,8 @@
-# tests/test_operations.py
 
 import pytest
-import math # Needed for math.sqrt in hypotenuse test
-
-# Consolidate all operation imports into one line
+import math
 from app.operations import Add, Subtract, Multiply, Divide, Power, NthRoot, Hypotenuse
+from app.exceptions import OperationError 
 
 def test_add_operation():
     """Test the Add operation with positive numbers."""
@@ -31,8 +29,8 @@ def test_divide_operation():
     assert op.get_name() == "divide"
 
 def test_divide_by_zero_raises_error():
-    """Test that Divide operation raises ValueError on division by zero."""
-    with pytest.raises(ValueError, match="Division by zero is not allowed."):
+    """Test that Divide operation raises OperationError on division by zero."""
+    with pytest.raises(OperationError, match="Division by zero is not allowed."): 
         op = Divide(5, 0)
         op.execute()
 
@@ -49,21 +47,21 @@ def test_power_operation():
 def test_nth_root_operation():
     """Test the NthRoot operation."""
     op = NthRoot(8, 3) # cube root of 8 = 2
-    assert op.execute() == pytest.approx(2) # Use pytest.approx for float comparisons
+    assert op.execute() == pytest.approx(2) 
     assert op.get_name() == "root"
 
     op = NthRoot(16, 4) # 4th root of 16 = 2
     assert op.execute() == pytest.approx(2)
 
 def test_nth_root_of_zero_degree_raises_error():
-    """Test that NthRoot operation raises ValueError for degree zero."""
-    with pytest.raises(ValueError, match="Root degree cannot be zero."):
+    """Test that NthRoot operation raises OperationError for degree zero."""
+    with pytest.raises(OperationError, match="Root degree cannot be zero."): 
         op = NthRoot(10, 0)
         op.execute()
 
 def test_nth_root_even_of_negative_raises_error():
-    """Test that NthRoot operation raises ValueError for even root of negative."""
-    with pytest.raises(ValueError, match="Cannot calculate even root of a negative number."):
+    """Test that NthRoot operation raises OperationError for even root of negative."""
+    with pytest.raises(OperationError, match="Cannot calculate even root of a negative number."): 
         op = NthRoot(-8, 2) # Square root of -8
         op.execute()
 
