@@ -1,4 +1,5 @@
 
+
 from app.operation_factory import OperationFactory
 from app.calculation import Calculation
 from app.logger import logger
@@ -12,20 +13,21 @@ from app.input_validators import (
 from app.history import CalculationHistory
 from app.calculator_memento import CalculatorHistoryManager
 from app.calculator_config import config # Import the global config singleton
+from app.observer import Subject
 from typing import List, Optional
 
-class Calculator:
+class Calculator(Subject):
     """
     Manages calculator operations, using a factory to create operation instances.
     Also handles input validation, logs operations, and manages calculation history
-    with undo/redo functionality using the Memento pattern.
+    with undo/redo functionality using the Memento pattern, and notifies observers.
     """
     def __init__(self):
-        # Pass the global config singleton to CalculationHistory
-        self.history = CalculationHistory(config) 
+        super().__init__() # Call parent constructor (Subject)
+        self.history = CalculationHistory(config)
         self._history_manager = CalculatorHistoryManager(self.history)
-        self._memento_stack = [] # Stores mementos for undo (Caretaker part)
-        self._redo_memento_stack = [] # Stores mementos for redo (Caretaker part)
+        self._memento_stack = []
+        self._redo_memento_stack = []
         logger.info("Calculator initialized with history and memento support.")
         self._is_undo_redo_in_progress = False # Initialize the flag
         self._save_current_history_state() # Save initial state
@@ -40,11 +42,13 @@ class Calculator:
              self._redo_memento_stack.clear()
         self._is_undo_redo_in_progress = False # Reset flag
 
-    def execute_operation(self, operation_name: str, operand_a_str: str, operand_b_str: str) -> Calculation:
-       
-      
 
-        # INPUT VALIDATION
+    def execute_operation(self, operation_name: str, operand_a_str: str, operand_b_str: str) -> Calculation:
+        """
+        Executes a specified operation after validating inputs and returns a Calculation object.
+        Adds the calculation to history and notifies observers.
+        """
+        #INPUT VALIDATION
         validate_numerical_input(operand_a_str, "first operand")
         validate_numerical_input(operand_b_str, "second operand")
 
@@ -67,6 +71,8 @@ class Calculator:
             self.history.add_calculation(calculation)
             self._save_current_history_state()
 
+            self.notify_observers() # NOTIFY OBSERVERS AFTER EACH NEW CALCULATION
+
             logger.info(f"Operation '{operation_name}' executed successfully. Result: {result}")
             return calculation
         except (ValidationError, OperationError) as e:
@@ -81,12 +87,24 @@ class Calculator:
         """Returns the current calculation history."""
         return self.history.get_history()
 
+    
+    def save_history(self):
+        """
+        Placeholder method for saving history.
+        Actual implementation will be in Phase 4, Step 10.
+        """
+        logger.debug("save_history method called (placeholder).")
+        # Actual saving logic will go here later
+        pass # pragma: no cover 
+
+
     def clear_history(self):
         """Clears all calculation history and the redo stack."""
         self.history.clear_history()
-        self._memento_stack.clear() # Clear memento stack too
-        self._redo_memento_stack.clear() # Clear redo memento stack
-        self._save_current_history_state() # Save an empty state (will append an empty memento)
+        self._memento_stack.clear()
+        self._redo_memento_stack.clear()
+        self._save_current_history_state() # Save an empty state
+        self.notify_observers() # NOTIFY OBSERVERS AFTER HISTORY IS CLEARED
         logger.info("Calculation history cleared.")
 
     def undo(self) -> Optional[Calculation]:
@@ -94,19 +112,16 @@ class Calculator:
         Undoes the last calculation.
         Restores previous history state from memento stack.
         """
-        if len(self._memento_stack) < 2: # Need at least initial state + one operation
+        if len(self._memento_stack) < 2:
             raise HistoryError("Nothing to undo.")
 
-        self._is_undo_redo_in_progress = True # Set flag to prevent clearing redo stack
+        self._is_undo_redo_in_progress = True
 
-        # Save current state to redo memento stack before undoing
         self._redo_memento_stack.append(self._memento_stack.pop())
-
-        # Restore previous state (the top of the now-modified memento stack)
         previous_memento = self._memento_stack[-1]
         self._history_manager.restore_state(previous_memento)
+        self.notify_observers() # NOTIFY OBSERVERS AFTER UNDO
         logger.info("Last calculation undone.")
-      
         return self.history.get_latest_calculation()
 
 
@@ -118,10 +133,10 @@ class Calculator:
         if not self._redo_memento_stack:
             raise HistoryError("Nothing to redo.")
 
-        self._is_undo_redo_in_progress = True # Set flag
+        self._is_undo_redo_in_progress = True
         redone_memento = self._redo_memento_stack.pop()
         self._memento_stack.append(redone_memento)
         self._history_manager.restore_state(redone_memento)
+        self.notify_observers() 
         logger.info("Last calculation redone.")
-        # Return the redone calculation for display
         return self.history.get_latest_calculation()
