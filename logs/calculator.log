@@ -1,0 +1,113 @@
+2025-06-26 20:50:30,096 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:50:30,096 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:50:56,506 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:50:56,506 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:57:29,032 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:57:29,032 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:57:43,619 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 20:57:43,619 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,135 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,135 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,148 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,151 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,151 - calculator_app - INFO - This is a test log message.
+2025-06-26 21:01:19,166 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,166 - calculator_app - INFO - Info message
+2025-06-26 21:01:19,166 - calculator_app - WARNING - Warning message
+2025-06-26 21:01:19,166 - calculator_app - ERROR - Error message
+2025-06-26 21:01:19,170 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,173 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:01:19,173 - calculator_app - INFO - Format test message.
+2025-06-26 21:01:19,334 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:01:19,334 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:01:19,335 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:01:19,335 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:01:19,336 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:01:19,336 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:06:53,177 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:06:53,177 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:08:03,670 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:08:03,670 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:08:10,545 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:08:10,546 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,264 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,270 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,270 - calculator_app - INFO - This is a test log message.
+2025-06-26 21:09:17,288 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,288 - calculator_app - INFO - Info message
+2025-06-26 21:09:17,288 - calculator_app - WARNING - Warning message
+2025-06-26 21:09:17,288 - calculator_app - ERROR - Error message
+2025-06-26 21:09:17,295 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,298 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:17,298 - calculator_app - INFO - Format test message.
+2025-06-26 21:09:17,391 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:09:17,391 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:09:17,392 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:09:17,392 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:09:17,392 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:09:17,393 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:09:29,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,265 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,268 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,268 - calculator_app - INFO - This is a test log message.
+2025-06-26 21:09:29,285 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,285 - calculator_app - INFO - Info message
+2025-06-26 21:09:29,285 - calculator_app - WARNING - Warning message
+2025-06-26 21:09:29,285 - calculator_app - ERROR - Error message
+2025-06-26 21:09:29,290 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,293 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:09:29,293 - calculator_app - INFO - Format test message.
+2025-06-26 21:09:29,377 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:09:29,377 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:09:29,378 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:09:29,378 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:09:29,379 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:09:29,379 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:34:54,219 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,232 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,235 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,235 - calculator_app - INFO - This is a test log message.
+2025-06-26 21:34:54,252 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,253 - calculator_app - INFO - Info message
+2025-06-26 21:34:54,253 - calculator_app - WARNING - Warning message
+2025-06-26 21:34:54,253 - calculator_app - ERROR - Error message
+2025-06-26 21:34:54,258 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,260 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:34:54,260 - calculator_app - INFO - Format test message.
+2025-06-26 21:34:54,425 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:34:54,425 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:34:54,426 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:34:54,426 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:34:54,426 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:34:54,427 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:38:21,214 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,226 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,229 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,229 - calculator_app - INFO - This is a test log message.
+2025-06-26 21:38:21,250 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,250 - calculator_app - INFO - Info message
+2025-06-26 21:38:21,250 - calculator_app - WARNING - Warning message
+2025-06-26 21:38:21,251 - calculator_app - ERROR - Error message
+2025-06-26 21:38:21,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,257 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:38:21,462 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:38:21,463 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:38:21,463 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:38:21,463 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:38:21,464 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:38:21,464 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:40:47,475 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:40:47,652 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:40:47,652 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:40:47,652 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:40:47,652 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:40:47,653 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:40:47,653 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
+2025-06-26 21:44:13,510 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
+2025-06-26 21:44:13,691 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
+2025-06-26 21:44:13,691 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
+2025-06-26 21:44:13,692 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
+2025-06-26 21:44:13,692 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
+2025-06-26 21:44:13,692 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
+2025-06-26 21:44:13,692 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
