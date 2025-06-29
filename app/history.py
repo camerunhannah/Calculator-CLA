@@ -1,67 +1,96 @@
+########################
+# History Management    #
+########################
 
-from typing import List, Optional
+from abc import ABC, abstractmethod
+import logging
+from typing import Any
 from app.calculation import Calculation
-from app.calculator_config import config as app_config_singleton # Renamed import to avoid confusion
 
-class CalculationHistory:
+
+class HistoryObserver(ABC):
     """
-    Manages the history of calculations.
-    Acts as the Caretaker for the Memento pattern by managing the history stack.
+    Abstract base class for calculator observers.
+
+    This class defines the interface for observers that monitor and react to
+    new calculation events. Implementing classes must provide an update method
+    to handle the received Calculation instance.
     """
-    def __init__(self, config_instance=None):
-        self._history: List[Calculation] = []
-        self._redo_stack: List[Calculation] = []
-        # Use provided config_instance or fallback to the app's global singleton
-        self.config = config_instance if config_instance is not None else app_config_singleton
-        print(f"DEBUG HISTORY: History initialized. Max History Size: {self.config.MAX_HISTORY_SIZE}") # Temporary debug
-        print(f"DEBUG HISTORY: History config instance ID: {id(self.config)}") # Temporary debug
 
-    def add_calculation(self, calculation: Calculation):
+    @abstractmethod
+    def update(self, calculation: Calculation) -> None:
         """
-        Adds a calculation to the history. Clears the redo stack.
-        Enforces maximum history size.
+        Handle new calculation event.
+
+        Args:
+            calculation (Calculation): The calculation that was performed.
         """
-        self._history.append(calculation)
-        self._redo_stack.clear() # Any new operation clears the redo stack
+        pass  # pragma: no cover
 
-        # Enforce maximum history size
-        while len(self._history) > self.config.MAX_HISTORY_SIZE: # <--- USE self.config
-            self._history.pop(0) # Remove the oldest entry
-        print(f"DEBUG HISTORY: After add, history size: {len(self._history)}") # Temporary debug
 
-    def get_history(self) -> List[Calculation]:
-        """Returns a copy of the current calculation history."""
-        return self._history[:] # Return a slice to prevent external modification
+class LoggingObserver(HistoryObserver):
+    """
+    Observer that logs calculations to a file.
 
-    def clear_history(self):
-        """Clears all calculation history and the redo stack."""
-        self._history.clear()
-        self._redo_stack.clear()
+    Implements the Observer pattern by listening for new calculations and logging
+    their details to a log file.
+    """
 
-    def undo(self) -> Optional[Calculation]:
+    def update(self, calculation: Calculation) -> None:
         """
-        Undoes the last calculation, moving it to the redo stack.
-        Returns the undone calculation or None if history is empty.
+        Log calculation details.
+
+        This method is called whenever a new calculation is performed. It records
+        the operation, operands, and result in the log file.
+
+        Args:
+            calculation (Calculation): The calculation that was performed.
         """
-        if not self._history:
-            return None # History is empty, nothing to undo
+        if calculation is None:
+            raise AttributeError("Calculation cannot be None")
+        logging.info(
+            f"Calculation performed: {calculation.operation} "
+            f"({calculation.operand1}, {calculation.operand2}) = "
+            f"{calculation.result}"
+        )
 
-        undone_calculation = self._history.pop()
-        self._redo_stack.append(undone_calculation)
-        return undone_calculation
 
-    def redo(self) -> Optional[Calculation]:
+class AutoSaveObserver(HistoryObserver):
+    """
+    Observer that automatically saves calculations.
+
+    Implements the Observer pattern by listening for new calculations and
+    triggering an automatic save of the calculation history if the auto-save
+    feature is enabled in the configuration.
+    """
+
+    def __init__(self, calculator: Any):
         """
-        Redoes the last undone calculation, moving it back to history.
-        Returns the redone calculation or None if redo stack is empty.
+        Initialize the AutoSaveObserver.
+
+        Args:
+            calculator (Any): The calculator instance to interact with.
+                Must have 'config' and 'save_history' attributes.
+
+        Raises:
+            TypeError: If the calculator does not have the required attributes.
         """
-        if not self._redo_stack:
-            return None # Redo stack is empty, nothing to redo
+        if not hasattr(calculator, 'config') or not hasattr(calculator, 'save_history'):
+            raise TypeError("Calculator must have 'config' and 'save_history' attributes")
+        self.calculator = calculator
 
-        redone_calculation = self._redo_stack.pop()
-        self._history.append(redone_calculation)
-        return redone_calculation
+    def update(self, calculation: Calculation) -> None:
+        """
+        Trigger auto-save.
 
-    def get_latest_calculation(self) -> Optional[Calculation]:
-        """Returns the most recent calculation without removing it, or None if history is empty."""
-        return self._history[-1] if self._history else None
+        This method is called whenever a new calculation is performed. If the
+        auto-save feature is enabled, it saves the current calculation history.
+
+        Args:
+            calculation (Calculation): The calculation that was performed.
+        """
+        if calculation is None:
+            raise AttributeError("Calculation cannot be None")
+        if self.calculator.config.auto_save:
+            self.calculator.save_history()
+            logging.info("History auto-saved")

@@ -1,160 +1,227 @@
-
 import pytest
-import math
+from decimal import Decimal
+from typing import Any, Dict, Type
+
+from app.exceptions import ValidationError
 from app.operations import (
-    Add, Subtract, Multiply, Divide, Power, NthRoot, Hypotenuse,
-    Modulus, IntegerDivision, Percentage, AbsoluteDifference
+    Operation,
+    Addition,
+    Subtraction,
+    Multiplication,
+    Division,
+    Power,
+    Root,
+    OperationFactory,
 )
-from app.exceptions import OperationError 
 
-def test_add_operation():
-    """Test the Add operation with positive numbers."""
-    op = Add(5, 3)
-    assert op.execute() == 8
-    assert op.get_name() == "add"
 
-def test_subtract_operation():
-    """Test the Subtract operation with positive numbers."""
-    op = Subtract(10, 4)
-    assert op.execute() == 6
-    assert op.get_name() == "subtract"
+class TestOperation:
+    """Test base Operation class functionality."""
 
-def test_multiply_operation():
-    """Test the Multiply operation with positive numbers."""
-    op = Multiply(6, 7)
-    assert op.execute() == 42
-    assert op.get_name() == "multiply"
+    def test_str_representation(self):
+        """Test that string representation returns class name."""
+        class TestOp(Operation):
+            def execute(self, a: Decimal, b: Decimal) -> Decimal:
+                return a
 
-def test_divide_operation():
-    """Test the Divide operation with positive numbers."""
-    op = Divide(10, 2)
-    assert op.execute() == 5
-    assert op.get_name() == "divide"
+        assert str(TestOp()) == "TestOp"
 
-def test_divide_by_zero_raises_error():
-    """Test that Divide operation raises OperationError on division by zero."""
-    with pytest.raises(OperationError, match="Division by zero is not allowed."):
-        op = Divide(5, 0)
-        op.execute()
 
-def test_power_operation():
-    """Test the Power operation."""
-    op = Power(2, 3) # 2^3 = 8
-    assert op.execute() == 8
-    assert op.get_name() == "power"
+class BaseOperationTest:
+    """Base test class for all operations."""
 
-    op = Power(4, 0.5) # 4^0.5 = 2 (square root)
-    assert op.execute() == 2
-    assert op.get_name() == "power"
+    operation_class: Type[Operation]
+    valid_test_cases: Dict[str, Dict[str, Any]]
+    invalid_test_cases: Dict[str, Dict[str, Any]]
 
-def test_nth_root_operation():
-    """Test the NthRoot operation."""
-    op = NthRoot(8, 3) # cube root of 8 = 2
-    assert op.execute() == pytest.approx(2) 
-    assert op.get_name() == "root"
+    def test_valid_operations(self):
+        """Test operation with valid inputs."""
+        operation = self.operation_class()
+        for name, case in self.valid_test_cases.items():
+            a = Decimal(str(case["a"]))
+            b = Decimal(str(case["b"]))
+            expected = Decimal(str(case["expected"]))
+            result = operation.execute(a, b)
+            assert result == expected, f"Failed case: {name}"
 
-    op = NthRoot(16, 4) # 4th root of 16 = 2
-    assert op.execute() == pytest.approx(2)
+    def test_invalid_operations(self):
+        """Test operation with invalid inputs raises appropriate errors."""
+        operation = self.operation_class()
+        for name, case in self.invalid_test_cases.items():
+            a = Decimal(str(case["a"]))
+            b = Decimal(str(case["b"]))
+            error = case.get("error", ValidationError)
+            error_message = case.get("message", "")
 
-def test_nth_root_of_zero_degree_raises_error():
-    """Test that NthRoot operation raises OperationError for degree zero."""
-    with pytest.raises(OperationError, match="Root degree cannot be zero."):
-        op = NthRoot(10, 0)
-        op.execute()
+            with pytest.raises(error, match=error_message):
+                operation.execute(a, b)
 
-def test_nth_root_even_of_negative_raises_error():
-    """Test that NthRoot operation raises OperationError for even root of negative."""
-    with pytest.raises(OperationError, match="Cannot calculate even root of a negative number."):
-        op = NthRoot(-8, 2) # Square root of -8
-        op.execute()
 
-def test_hypotenuse_operation():
-    """Test the Hypotenuse operation with standard values."""
-    op = Hypotenuse(3, 4) # 3^2 + 4^2 = 9 + 16 = 25, sqrt(25) = 5
-    assert op.execute() == pytest.approx(5.0) # Use approx for float comparisons
-    assert op.get_name() == "hypotenuse"
+class TestAddition(BaseOperationTest):
+    """Test Addition operation."""
 
-def test_hypotenuse_with_zero_and_negative():
-    """Test Hypotenuse with zero and negative inputs (squares make them positive)."""
-    op = Hypotenuse(0, 5) # sqrt(0^2 + 5^2) = 5
-    assert op.execute() == pytest.approx(5.0)
+    operation_class = Addition
+    valid_test_cases = {
+        "positive_numbers": {"a": "5", "b": "3", "expected": "8"},
+        "negative_numbers": {"a": "-5", "b": "-3", "expected": "-8"},
+        "mixed_signs": {"a": "-5", "b": "3", "expected": "-2"},
+        "zero_sum": {"a": "5", "b": "-5", "expected": "0"},
+        "decimals": {"a": "5.5", "b": "3.3", "expected": "8.8"},
+        "large_numbers": {
+            "a": "1e10",
+            "b": "1e10",
+            "expected": "20000000000"
+        },
+    }
+    invalid_test_cases = {}  # Addition has no invalid cases
 
-    op = Hypotenuse(-3, -4) # sqrt((-3)^2 + (-4)^2) = sqrt(9 + 16) = 5
-    assert op.execute() == pytest.approx(5.0)
 
-def test_hypotenuse_with_floats():
-    """Test Hypotenuse with floating point numbers."""
-    op = Hypotenuse(1.0, 1.0) # sqrt(1^2 + 1^2) = sqrt(2)
-    assert op.execute() == pytest.approx(math.sqrt(2))
+class TestSubtraction(BaseOperationTest):
+    """Test Subtraction operation."""
 
-def test_modulus_operation():
-    """Test the Modulus operation."""
-    op = Modulus(10, 3) # 10 % 3 = 1
-    assert op.execute() == 1
-    assert op.get_name() == "modulus"
+    operation_class = Subtraction
+    valid_test_cases = {
+        "positive_numbers": {"a": "5", "b": "3", "expected": "2"},
+        "negative_numbers": {"a": "-5", "b": "-3", "expected": "-2"},
+        "mixed_signs": {"a": "-5", "b": "3", "expected": "-8"},
+        "zero_result": {"a": "5", "b": "5", "expected": "0"},
+        "decimals": {"a": "5.5", "b": "3.3", "expected": "2.2"},
+        "large_numbers": {
+            "a": "1e10",
+            "b": "1e9",
+            "expected": "9000000000"
+        },
+    }
+    invalid_test_cases = {}  # Subtraction has no invalid cases
 
-    op = Modulus(10.5, 2) # 10.5 % 2 = 0.5
-    assert op.execute() == pytest.approx(0.5)
 
-    op = Modulus(-10, 3) # -10 % 3 = 2 (in Python)
-    assert op.execute() == 2
+class TestMultiplication(BaseOperationTest):
+    """Test Multiplication operation."""
 
-def test_modulus_by_zero_raises_error():
-    """Test that Modulus operation raises OperationError on division by zero."""
-    with pytest.raises(OperationError, match="Modulus by zero is not allowed."):
-        op = Modulus(5, 0)
-        op.execute()
+    operation_class = Multiplication
+    valid_test_cases = {
+        "positive_numbers": {"a": "5", "b": "3", "expected": "15"},
+        "negative_numbers": {"a": "-5", "b": "-3", "expected": "15"},
+        "mixed_signs": {"a": "-5", "b": "3", "expected": "-15"},
+        "multiply_by_zero": {"a": "5", "b": "0", "expected": "0"},
+        "decimals": {"a": "5.5", "b": "3.3", "expected": "18.15"},
+        "large_numbers": {
+            "a": "1e5",
+            "b": "1e5",
+            "expected": "10000000000"
+        },
+    }
+    invalid_test_cases = {}  # Multiplication has no invalid cases
 
-def test_integer_division_operation():
-    """Test the Integer Division operation."""
-    op = IntegerDivision(10, 3) # 10 // 3 = 3
-    assert op.execute() == 3
-    assert op.get_name() == "int_divide"
 
-    op = IntegerDivision(10.5, 2) # 10.5 // 2 = 5.0
-    assert op.execute() == 5.0
+class TestDivision(BaseOperationTest):
+    """Test Division operation."""
 
-    op = IntegerDivision(-10, 3) # -10 // 3 = -4 (in Python)
-    assert op.execute() == -4
+    operation_class = Division
+    valid_test_cases = {
+        "positive_numbers": {"a": "6", "b": "2", "expected": "3"},
+        "negative_numbers": {"a": "-6", "b": "-2", "expected": "3"},
+        "mixed_signs": {"a": "-6", "b": "2", "expected": "-3"},
+        "decimals": {"a": "5.5", "b": "2", "expected": "2.75"},
+        "divide_zero": {"a": "0", "b": "5", "expected": "0"},
+    }
+    invalid_test_cases = {
+        "divide_by_zero": {
+            "a": "5",
+            "b": "0",
+            "error": ValidationError,
+            "message": "Division by zero is not allowed"
+        },
+    }
 
-def test_integer_division_by_zero_raises_error():
-    """Test that Integer Division operation raises OperationError on division by zero."""
-    with pytest.raises(OperationError, match="Integer division by zero is not allowed."):
-        op = IntegerDivision(5, 0)
-        op.execute()
 
-def test_percentage_operation():
-    """Test the Percentage operation."""
-    op = Percentage(50, 200) # (50 / 200) * 100 = 25.0
-    assert op.execute() == 25.0
-    assert op.get_name() == "percent"
+class TestPower(BaseOperationTest):
+    """Test Power operation."""
 
-    op = Percentage(10, 40) # (10 / 40) * 100 = 25.0
-    assert op.execute() == 25.0
+    operation_class = Power
+    valid_test_cases = {
+        "positive_base_and_exponent": {"a": "2", "b": "3", "expected": "8"},
+        "zero_exponent": {"a": "5", "b": "0", "expected": "1"},
+        "one_exponent": {"a": "5", "b": "1", "expected": "5"},
+        "decimal_base": {"a": "2.5", "b": "2", "expected": "6.25"},
+        "zero_base": {"a": "0", "b": "5", "expected": "0"},
+    }
+    invalid_test_cases = {
+        "negative_exponent": {
+            "a": "2",
+            "b": "-3",
+            "error": ValidationError,
+            "message": "Negative exponents not supported"
+        },
+    }
 
-    op = Percentage(75, 100) # (75 / 100) * 100 = 75.0
-    assert op.execute() == 75.0
 
-def test_percentage_by_zero_base_raises_error():
-    """Test that Percentage operation raises OperationError on zero base."""
-    with pytest.raises(OperationError, match="Percentage calculation with zero as base is not allowed."):
-        op = Percentage(50, 0)
-        op.execute()
+class TestRoot(BaseOperationTest):
+    """Test Root operation."""
 
-def test_absolute_difference_operation():
-    """Test the Absolute Difference operation."""
-    op = AbsoluteDifference(10, 5) # |10 - 5| = 5
-    assert op.execute() == 5
-    assert op.get_name() == "abs_diff"
+    operation_class = Root
+    valid_test_cases = {
+        "square_root": {"a": "9", "b": "2", "expected": "3"},
+        "cube_root": {"a": "27", "b": "3", "expected": "3"},
+        "fourth_root": {"a": "16", "b": "4", "expected": "2"},
+        "decimal_root": {"a": "2.25", "b": "2", "expected": "1.5"},
+    }
+    invalid_test_cases = {
+        "negative_base": {
+            "a": "-9",
+            "b": "2",
+            "error": ValidationError,
+            "message": "Cannot calculate root of negative number"
+        },
+        "zero_root": {
+            "a": "9",
+            "b": "0",
+            "error": ValidationError,
+            "message": "Zero root is undefined"
+        },
+    }
 
-    op = AbsoluteDifference(5, 10) # |5 - 10| = 5
-    assert op.execute() == 5
 
-    op = AbsoluteDifference(-5, 5) # |-5 - 5| = |-10| = 10
-    assert op.execute() == 10
+class TestOperationFactory:
+    """Test OperationFactory functionality."""
 
-    op = AbsoluteDifference(-5, -10) # |-5 - (-10)| = |-5 + 10| = |5| = 5
-    assert op.execute() == 5
+    def test_create_valid_operations(self):
+        """Test creation of all valid operations."""
+        operation_map = {
+            'add': Addition,
+            'subtract': Subtraction,
+            'multiply': Multiplication,
+            'divide': Division,
+            'power': Power,
+            'root': Root,
+        }
 
-    op = AbsoluteDifference(7.5, 2.5) # |7.5 - 2.5| = 5.0
-    assert op.execute() == pytest.approx(5.0)
+        for op_name, op_class in operation_map.items():
+            operation = OperationFactory.create_operation(op_name)
+            assert isinstance(operation, op_class)
+            # Test case-insensitive
+            operation = OperationFactory.create_operation(op_name.upper())
+            assert isinstance(operation, op_class)
+
+    def test_create_invalid_operation(self):
+        """Test creation of invalid operation raises error."""
+        with pytest.raises(ValueError, match="Unknown operation: invalid_op"):
+            OperationFactory.create_operation("invalid_op")
+
+    def test_register_valid_operation(self):
+        """Test registering a new valid operation."""
+        class NewOperation(Operation):
+            def execute(self, a: Decimal, b: Decimal) -> Decimal:
+                return a
+
+        OperationFactory.register_operation("new_op", NewOperation)
+        operation = OperationFactory.create_operation("new_op")
+        assert isinstance(operation, NewOperation)
+
+    def test_register_invalid_operation(self):
+        """Test registering an invalid operation class raises error."""
+        class InvalidOperation:
+            pass
+
+        with pytest.raises(TypeError, match="Operation class must inherit"):
+            OperationFactory.register_operation("invalid", InvalidOperation)

@@ -1,44 +1,56 @@
+########################
+# Calculator Memento    #
+########################
 
-from typing import List
-from app.calculation import Calculation # Memento needs to store Calculation objects
+from dataclasses import dataclass, field
+import datetime
+from typing import Any, Dict, List
 
+from app.calculation import Calculation
+
+
+@dataclass
 class CalculatorMemento:
     """
-    A Memento class that stores the internal state of the CalculationHistory.
+    Stores calculator state for undo/redo functionality.
+
+    The Memento pattern allows the Calculator to save its current state (history)
+    so that it can be restored later. This enables features like undo and redo.
     """
-    def __init__(self, history_state: List[Calculation], redo_stack_state: List[Calculation]):
-        # Store copies to ensure the memento is truly immutable
-        self._history_state = history_state[:]
-        self._redo_stack_state = redo_stack_state[:]
 
-    def get_history_state(self) -> List[Calculation]:
-        """Returns the captured history state."""
-        return self._history_state[:]
+    history: List[Calculation]  # List of Calculation instances representing the calculator's history
+    timestamp: datetime.datetime = field(default_factory=datetime.datetime.now)  # Time when the memento was created
 
-    def get_redo_stack_state(self) -> List[Calculation]:
-        """Returns the captured redo stack state."""
-        return self._redo_stack_state[:]
-
-class CalculatorHistoryManager:
-    """
-    Manages the creation and restoration of CalculatorMemento objects.
-    Acts as part of the Originator (creating Mementos) and Caretaker (restoring from Mementos).
-    """
-    def __init__(self, history_instance):
-        self._history_instance = history_instance # Reference to the CalculationHistory object
-
-    def save_state(self) -> CalculatorMemento:
+    def to_dict(self) -> Dict[str, Any]:
         """
-        Saves the current state of the CalculationHistory into a Memento.
+        Convert memento to dictionary.
+
+        This method serializes the memento's state into a dictionary format,
+        making it easy to store or transmit.
+
+        Returns:
+            Dict[str, Any]: A dictionary containing the serialized state of the memento.
         """
-        return CalculatorMemento(
-            self._history_instance.get_history(),
-            self._history_instance._redo_stack[:] # Directly access for saving redo stack
+        return { # pragma: no cover
+            'history': [calc.to_dict() for calc in self.history],
+            'timestamp': self.timestamp.isoformat()
+        }
+
+    @classmethod
+    def from_dict(cls, data: Dict[str, Any]) -> 'CalculatorMemento':
+        """
+        Create memento from dictionary.
+
+        This class method deserializes a dictionary to recreate a CalculatorMemento
+        instance, restoring the calculator's history and timestamp.
+
+        Args:
+            data (Dict[str, Any]): Dictionary containing serialized memento data.
+
+        Returns:
+            CalculatorMemento: A new instance of CalculatorMemento with restored state.
+        """
+        return cls( # pragma: no cover
+            history=[Calculation.from_dict(calc) for calc in data['history']],
+            timestamp=datetime.datetime.fromisoformat(data['timestamp'])
         )
-
-    def restore_state(self, memento: CalculatorMemento):
-        """
-        Restores the CalculationHistory to a state captured by the given Memento.
-        """
-        self._history_instance._history = memento.get_history_state()
-        self._history_instance._redo_stack = memento.get_redo_stack_state()

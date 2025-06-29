@@ -1,871 +1,104 @@
-2025-06-26 20:50:30,096 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:50:30,096 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:50:56,506 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:50:56,506 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:57:29,032 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:57:29,032 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:57:43,619 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 20:57:43,619 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,135 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,135 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,148 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,151 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,151 - calculator_app - INFO - This is a test log message.
-2025-06-26 21:01:19,166 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,166 - calculator_app - INFO - Info message
-2025-06-26 21:01:19,166 - calculator_app - WARNING - Warning message
-2025-06-26 21:01:19,166 - calculator_app - ERROR - Error message
-2025-06-26 21:01:19,170 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,173 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:01:19,173 - calculator_app - INFO - Format test message.
-2025-06-26 21:01:19,334 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:01:19,334 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:01:19,335 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:01:19,335 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:01:19,336 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:01:19,336 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:06:53,177 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:06:53,177 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:08:03,670 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:08:03,670 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:08:10,545 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:08:10,546 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,264 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,270 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,270 - calculator_app - INFO - This is a test log message.
-2025-06-26 21:09:17,288 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,288 - calculator_app - INFO - Info message
-2025-06-26 21:09:17,288 - calculator_app - WARNING - Warning message
-2025-06-26 21:09:17,288 - calculator_app - ERROR - Error message
-2025-06-26 21:09:17,295 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,298 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:17,298 - calculator_app - INFO - Format test message.
-2025-06-26 21:09:17,391 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:09:17,391 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:09:17,392 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:09:17,392 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:09:17,392 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:09:17,393 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:09:29,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,265 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,268 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,268 - calculator_app - INFO - This is a test log message.
-2025-06-26 21:09:29,285 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,285 - calculator_app - INFO - Info message
-2025-06-26 21:09:29,285 - calculator_app - WARNING - Warning message
-2025-06-26 21:09:29,285 - calculator_app - ERROR - Error message
-2025-06-26 21:09:29,290 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,293 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:09:29,293 - calculator_app - INFO - Format test message.
-2025-06-26 21:09:29,377 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:09:29,377 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:09:29,378 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:09:29,378 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:09:29,379 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:09:29,379 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:34:54,219 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,232 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,235 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,235 - calculator_app - INFO - This is a test log message.
-2025-06-26 21:34:54,252 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,253 - calculator_app - INFO - Info message
-2025-06-26 21:34:54,253 - calculator_app - WARNING - Warning message
-2025-06-26 21:34:54,253 - calculator_app - ERROR - Error message
-2025-06-26 21:34:54,258 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,260 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:34:54,260 - calculator_app - INFO - Format test message.
-2025-06-26 21:34:54,425 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:34:54,425 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:34:54,426 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:34:54,426 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:34:54,426 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:34:54,427 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:38:21,214 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,226 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,229 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,229 - calculator_app - INFO - This is a test log message.
-2025-06-26 21:38:21,250 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,250 - calculator_app - INFO - Info message
-2025-06-26 21:38:21,250 - calculator_app - WARNING - Warning message
-2025-06-26 21:38:21,251 - calculator_app - ERROR - Error message
-2025-06-26 21:38:21,255 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,257 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:38:21,462 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:38:21,463 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:38:21,463 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:38:21,463 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:38:21,464 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:38:21,464 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:40:47,475 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:40:47,652 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:40:47,652 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:40:47,652 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:40:47,652 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:40:47,653 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:40:47,653 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:44:13,510 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:44:13,691 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:44:13,691 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:44:13,692 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:44:13,692 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:44:13,692 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:44:13,692 - calculator_app - ERROR - Error executing operation 'divide': Division by zero is not allowed.
-2025-06-26 21:55:12,825 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:56:36,886 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:56:36,915 - calculator_app - INFO - Attempting to execute operation: add with inputs abc, 2
-2025-06-26 21:56:36,915 - calculator_app - INFO - Operation 'add' executed successfully. Result: abc2
-2025-06-26 21:56:36,918 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001, 5
-2025-06-26 21:56:36,918 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'multiply': can't multiply sequence by non-int of type 'str'
-2025-06-26 21:56:36,926 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:56:36,926 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'divide': unsupported operand type(s) for /: 'str' and 'str'
-2025-06-26 21:56:36,931 - calculator_app - INFO - Attempting to execute operation: root with inputs 10, 0
-2025-06-26 21:56:36,931 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'root': '<' not supported between instances of 'str' and 'int'
-2025-06-26 21:56:36,937 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:56:36,938 - calculator_app - INFO - Operation 'add' executed successfully. Result: 53
-2025-06-26 21:56:37,159 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:56:37,159 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:56:37,159 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:56:37,159 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:56:37,160 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:56:37,160 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'divide': Division by zero is not allowed.
-2025-06-26 21:56:52,513 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:56:52,539 - calculator_app - INFO - Attempting to execute operation: add with inputs abc, 2
-2025-06-26 21:56:52,539 - calculator_app - INFO - Operation 'add' executed successfully. Result: abc2
-2025-06-26 21:56:52,542 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001, 5
-2025-06-26 21:56:52,542 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'multiply': can't multiply sequence by non-int of type 'str'
-2025-06-26 21:56:52,549 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:56:52,549 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'divide': unsupported operand type(s) for /: 'str' and 'str'
-2025-06-26 21:56:52,554 - calculator_app - INFO - Attempting to execute operation: root with inputs 10, 0
-2025-06-26 21:56:52,554 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'root': '<' not supported between instances of 'str' and 'int'
-2025-06-26 21:56:52,560 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:56:52,560 - calculator_app - INFO - Operation 'add' executed successfully. Result: 53
-2025-06-26 21:56:52,662 - calculator_app - INFO - Attempting to execute operation: add with inputs 5, 3
-2025-06-26 21:56:52,662 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8
-2025-06-26 21:56:52,663 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1, 2
-2025-06-26 21:56:52,663 - calculator_app - ERROR - Error executing operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 21:56:52,663 - calculator_app - INFO - Attempting to execute operation: divide with inputs 5, 0
-2025-06-26 21:56:52,664 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'divide': Division by zero is not allowed.
-2025-06-26 21:59:17,419 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 21:59:17,450 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001.0, 5.0
-2025-06-26 21:59:17,450 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 5005.0
-2025-06-26 21:59:17,455 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 21:59:17,455 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 21:59:17,455 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 21:59:17,455 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 21:59:17,547 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 21:59:17,547 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 21:59:17,548 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 21:59:17,548 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 22:38:48,687 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 22:38:48,726 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001.0, 5.0
-2025-06-26 22:38:48,726 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 5005.0
-2025-06-26 22:38:48,730 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:38:48,730 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:38:48,730 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 22:38:48,730 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 22:38:48,919 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:38:48,920 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:38:48,920 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 22:38:48,920 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 22:57:21,726 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 22:57:21,772 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001.0, 5.0
-2025-06-26 22:57:21,772 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 5005.0
-2025-06-26 22:57:21,777 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:57:21,777 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:57:21,777 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 22:57:21,777 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 22:57:21,938 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:57:21,939 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:57:21,939 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 22:57:21,939 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 22:59:17,224 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 22:59:17,253 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001.0, 5.0
-2025-06-26 22:59:17,253 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 5005.0
-2025-06-26 22:59:17,257 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:59:17,257 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:59:17,258 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 22:59:17,258 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 22:59:17,431 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 22:59:17,431 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 22:59:17,431 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 22:59:17,431 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 23:01:23,402 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 23:01:23,431 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 1001.0, 5.0
-2025-06-26 23:01:23,431 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 5005.0
-2025-06-26 23:01:23,436 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 23:01:23,436 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 23:01:23,436 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 23:01:23,436 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 23:01:23,607 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 23:01:23,607 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 23:01:23,608 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 23:01:23,608 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-26 23:03:16,531 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-26 23:03:16,546 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 23:03:16,546 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 23:03:16,546 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-26 23:03:16,546 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-26 23:03:16,638 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-26 23:03:16,638 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-26 23:03:16,638 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-26 23:03:16,638 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:17:43,315 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:17:43,356 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:17:43,356 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:17:43,356 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:17:43,356 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:17:43,544 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:17:43,544 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:17:43,545 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:17:43,545 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:27:34,005 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:27:44,429 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:29:36,090 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:29:36,124 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,125 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,126 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,126 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,127 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,127 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:29:36,127 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:29:36,127 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:29:36,127 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:29:36,292 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,292 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:29:36,292 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:29:36,293 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:29:36,293 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:29:36,293 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:29:36,294 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,093 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:41:28,128 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,128 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,129 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,130 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,130 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,130 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:41:28,130 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:41:28,131 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:41:28,131 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:41:28,297 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,297 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:41:28,297 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:41:28,298 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:41:28,298 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:41:28,298 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:41:28,299 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,653 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:45:49,673 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,674 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,674 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,675 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,676 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,676 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:45:49,676 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:45:49,676 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:45:49,676 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:45:49,766 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,766 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:45:49,766 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:45:49,767 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:45:49,767 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:45:49,767 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:45:49,768 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,560 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:46:39,571 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,571 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 10:46:39,571 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:39,571 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:39,571 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:39,571 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:39,571 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,572 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:39,572 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:39,572 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,572 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:39,572 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 10:46:39,572 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 10:46:39,600 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,601 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,601 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,602 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,603 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,603 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:46:39,603 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:46:39,603 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:46:39,603 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:46:39,751 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,751 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:46:39,751 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:46:39,752 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:39,752 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:46:39,752 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:46:39,752 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,350 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:46:45,360 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,360 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 10:46:45,360 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 10:46:45,361 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:46:45,361 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 10:46:45,362 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 10:46:45,390 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,391 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,392 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,392 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,393 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,393 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:46:45,393 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:46:45,393 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:46:45,393 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:46:45,484 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,484 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:46:45,484 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:46:45,485 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:46:45,485 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:46:45,485 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:46:45,486 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,799 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 10:47:48,808 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,808 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 10:47:48,808 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:47:48,808 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:47:48,808 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:47:48,808 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:47:48,808 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,809 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:47:48,809 - calculator_app - INFO - Last calculation redone.
-2025-06-27 10:47:48,809 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,809 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Last calculation undone.
-2025-06-27 10:47:48,809 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 10:47:48,809 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 10:47:48,819 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,820 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,820 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,821 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,822 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,822 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:47:48,822 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:47:48,822 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 10:47:48,822 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 10:47:48,906 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,906 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 10:47:48,906 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 10:47:48,907 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 10:47:48,907 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 10:47:48,907 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 10:47:48,907 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,398 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:02:03,641 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,642 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:02:03,642 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:02:03,645 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:02:03,646 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,646 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:02:03,646 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:02:03,646 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:02:03,646 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:02:03,646 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:02:03,646 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:02:03,646 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:02:03,656 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,656 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,657 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,658 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,658 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,659 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:02:03,659 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:02:03,659 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:02:03,659 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:02:03,829 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,829 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:02:03,829 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:02:03,830 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:02:03,830 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:02:03,830 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:02:03,830 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,456 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:04:02,502 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,503 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:04:02,503 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:04:02,505 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,505 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,506 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:02,506 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:02,507 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:04:02,507 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:04:02,507 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:02,507 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:04:02,507 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:04:02,517 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,518 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,518 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,520 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,521 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,521 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:04:02,521 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:04:02,521 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:04:02,521 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:04:02,700 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,700 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:04:02,700 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:04:02,700 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:02,701 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:04:02,701 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:04:02,701 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,816 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:04:12,855 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,855 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:04:12,856 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,858 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:12,858 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:12,859 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:04:12,859 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,859 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:04:12,859 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:04:12,859 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:04:12,859 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:04:12,859 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:04:12,859 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:04:12,859 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:04:12,869 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,870 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,871 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,871 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,872 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,872 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:04:12,872 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:04:12,873 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:04:12,873 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:04:12,965 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,965 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:04:12,966 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:04:12,966 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:04:12,966 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:04:12,966 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:04:12,967 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,096 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:05:40,124 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,125 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:05:40,193 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,193 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:05:40,196 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 11:05:40,200 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,201 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:05:40,201 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:05:40,205 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,205 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:05:40,206 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:05:40,206 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:05:40,206 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:05:40,206 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,206 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:05:40,206 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:05:40,207 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:05:40,207 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,207 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:05:40,207 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:05:40,207 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:05:40,224 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,225 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,227 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,228 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,229 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,229 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:05:40,229 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:05:40,229 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:05:40,229 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:05:40,403 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,403 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:05:40,403 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:05:40,404 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:05:40,404 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:05:40,404 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:05:40,405 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,128 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:10:09,144 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,144 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:10:09,186 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,186 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:10:09,189 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 11:10:09,191 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,191 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:10:09,192 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:10:09,194 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:10:09,195 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,195 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:10:09,195 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:10:09,195 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:10:09,195 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:10:09,195 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:10:09,195 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:10:09,195 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:10:09,205 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,205 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,206 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,207 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,208 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,208 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:10:09,208 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:10:09,208 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:10:09,208 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:10:09,296 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,296 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:10:09,296 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:10:09,297 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:10:09,297 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:10:09,297 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:10:09,298 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,223 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 11:11:22,239 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,239 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:11:22,293 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,293 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 11:11:22,299 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 11:11:22,300 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,300 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 11:11:22,300 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:11:22,303 - calculator_app - INFO - Last calculation redone.
-2025-06-27 11:11:22,304 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,304 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 11:11:22,304 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 11:11:22,304 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 11:11:22,304 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 11:11:22,304 - calculator_app - INFO - Last calculation undone.
-2025-06-27 11:11:22,304 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 11:11:22,304 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 11:11:22,314 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,315 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,316 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,316 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,317 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,317 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:11:22,317 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:11:22,317 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 11:11:22,317 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 11:11:22,409 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,409 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 11:11:22,409 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 11:11:22,409 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 11:11:22,410 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 11:11:22,410 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 11:11:22,410 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,376 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 14:29:32,401 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,401 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:29:32,403 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,403 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:29:32,451 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 14:29:32,452 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,452 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 14:29:32,452 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 14:29:32,454 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,454 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:29:32,454 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:29:32,455 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,456 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:29:32,456 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:29:32,456 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 14:29:32,456 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 14:29:32,456 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:29:32,456 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 14:29:32,456 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 14:29:32,466 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,467 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,467 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,468 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,469 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,469 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:29:32,469 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:29:32,469 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 14:29:32,469 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 14:29:32,676 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,676 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:29:32,676 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:29:32,677 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:29:32,677 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 14:29:32,677 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 14:29:32,677 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,432 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 14:30:48,453 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,453 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:30:48,454 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,454 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:30:48,503 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 14:30:48,504 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,504 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 14:30:48,504 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,507 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 14:30:48,507 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:30:48,507 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:30:48,507 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:30:48,507 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:30:48,507 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,508 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:30:48,508 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:30:48,508 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,508 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:30:48,508 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 14:30:48,508 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 14:30:48,518 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,518 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,519 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,520 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,521 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,521 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:30:48,521 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:30:48,521 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 14:30:48,521 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 14:30:48,688 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,688 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:30:48,688 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:30:48,689 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:30:48,689 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 14:30:48,689 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 14:30:48,689 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,031 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 14:32:44,059 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,059 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:32:44,060 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,060 - calculator_app - INFO - OBSERVER: Auto-save is disabled in configuration.
-2025-06-27 14:32:44,077 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,078 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 14:32:44,078 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 14:32:44,080 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,080 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:32:44,080 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,081 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:32:44,081 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 14:32:44,082 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 14:32:44,082 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:32:44,082 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 14:32:44,082 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 14:32:44,092 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,093 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,094 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,094 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,095 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,095 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:32:44,095 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:32:44,095 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 14:32:44,095 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 14:32:44,272 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,272 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:32:44,272 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:32:44,272 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:32:44,273 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 14:32:44,273 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 14:32:44,273 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,544 - calculator_app - INFO - Logging started. Log file: logs/calculator.log
-2025-06-27 14:34:18,566 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,566 - calculator_app - INFO - OBSERVER: Auto-saving calculation history...
-2025-06-27 14:34:18,567 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,568 - calculator_app - INFO - OBSERVER: Auto-save is disabled in configuration.
-2025-06-27 14:34:18,569 - calculator_app - WARNING - AutoSaveObserver received update from unexpected subject type: <class 'str'>
-2025-06-27 14:34:18,569 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,570 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 2.0
-2025-06-27 14:34:18,570 - calculator_app - INFO - Operation 'add' executed successfully. Result: 3.0
-2025-06-27 14:34:18,572 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,572 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:34:18,572 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 5.0, 2.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 3.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 4.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 12.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation redone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: add with inputs 1.0, 1.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'add' executed successfully. Result: 2.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: subtract with inputs 2.0, 1.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'subtract' executed successfully. Result: 1.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Last calculation undone.
-2025-06-27 14:34:18,573 - calculator_app - INFO - Attempting to execute operation: multiply with inputs 3.0, 3.0
-2025-06-27 14:34:18,573 - calculator_app - INFO - Operation 'multiply' executed successfully. Result: 9.0
-2025-06-27 14:34:18,584 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,584 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,585 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,586 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,586 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,587 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:34:18,587 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:34:18,587 - calculator_app - INFO - Attempting to execute operation: power with inputs 2.0, 3.0
-2025-06-27 14:34:18,587 - calculator_app - INFO - Operation 'power' executed successfully. Result: 8.0
-2025-06-27 14:34:18,768 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,768 - calculator_app - INFO - Attempting to execute operation: add with inputs 5.0, 3.0
-2025-06-27 14:34:18,768 - calculator_app - INFO - Operation 'add' executed successfully. Result: 8.0
-2025-06-27 14:34:18,768 - calculator_app - INFO - Calculator initialized with history and memento support.
-2025-06-27 14:34:18,769 - calculator_app - INFO - Attempting to execute operation: bad_op with inputs 1.0, 2.0
-2025-06-27 14:34:18,769 - calculator_app - CRITICAL - An unexpected critical error occurred during operation 'bad_op': Unsupported operation: bad_op
-2025-06-27 14:34:18,769 - calculator_app - INFO - Calculator initialized with history and memento support.
+2025-06-22 22:49:52,474 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:49:52,475 - INFO - No history file found - starting with empty history
+2025-06-22 22:49:52,475 - INFO - Calculator initialized with configuration
+2025-06-22 22:49:52,475 - INFO - Added observer: LoggingObserver
+2025-06-22 22:49:52,475 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:50:00,743 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:50:00,743 - INFO - No history file found - starting with empty history
+2025-06-22 22:50:00,743 - INFO - Calculator initialized with configuration
+2025-06-22 22:50:00,743 - INFO - Added observer: LoggingObserver
+2025-06-22 22:50:00,743 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:51:00,698 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:51:00,699 - INFO - No history file found - starting with empty history
+2025-06-22 22:51:00,699 - INFO - Calculator initialized with configuration
+2025-06-22 22:51:00,699 - INFO - Added observer: LoggingObserver
+2025-06-22 22:51:00,699 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:55:42,338 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:55:42,339 - INFO - No history file found - starting with empty history
+2025-06-22 22:55:42,339 - INFO - Calculator initialized with configuration
+2025-06-22 22:55:42,339 - INFO - Added observer: LoggingObserver
+2025-06-22 22:55:42,339 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:56:04,820 - INFO - Set operation: Addition
+2025-06-22 22:56:04,821 - INFO - Calculation performed: Addition (1, 1) = 2
+2025-06-22 22:56:04,845 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-22 22:56:04,846 - INFO - History auto-saved
+2025-06-22 22:56:25,792 - INFO - Empty history saved
+2025-06-22 22:56:32,659 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:56:32,680 - INFO - Loaded empty history file
+2025-06-22 22:56:32,681 - INFO - Calculator initialized with configuration
+2025-06-22 22:56:32,681 - INFO - Added observer: LoggingObserver
+2025-06-22 22:56:32,681 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:56:56,204 - INFO - Set operation: Addition
+2025-06-22 22:56:56,204 - INFO - Calculation performed: Addition (3, 3) = 6
+2025-06-22 22:56:56,206 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-22 22:56:56,206 - INFO - History auto-saved
+2025-06-22 22:56:58,683 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-22 22:57:01,775 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-22 22:57:01,780 - INFO - Loaded 1 calculations from history
+2025-06-22 22:57:01,780 - INFO - Calculator initialized with configuration
+2025-06-22 22:57:01,780 - INFO - Added observer: LoggingObserver
+2025-06-22 22:57:01,780 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:57:11,615 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 19:14:00,521 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-23 19:35:10,109 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-23 19:35:10,130 - INFO - Loaded 1 calculations from history
+2025-06-23 19:35:10,130 - INFO - Calculator initialized with configuration
+2025-06-23 19:35:10,130 - INFO - Added observer: LoggingObserver
+2025-06-23 19:35:10,130 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:35:46,259 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-23 19:35:46,261 - INFO - Loaded 1 calculations from history
+2025-06-23 19:35:46,261 - INFO - Calculator initialized with configuration
+2025-06-23 19:35:46,261 - INFO - Added observer: LoggingObserver
+2025-06-23 19:35:46,261 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:35:54,427 - INFO - Set operation: Addition
+2025-06-23 19:35:54,427 - INFO - Calculation performed: Addition (1, 1) = 2
+2025-06-23 19:35:54,452 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 19:35:54,452 - INFO - History auto-saved
+2025-06-23 19:36:38,704 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 19:36:44,920 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-23 19:36:44,922 - INFO - Loaded 2 calculations from history
+2025-06-23 19:36:44,922 - INFO - Calculator initialized with configuration
+2025-06-23 19:36:44,922 - INFO - Added observer: LoggingObserver
+2025-06-23 19:36:44,922 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:36:49,916 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 20:08:16,724 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 22:46:45,842 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-23 22:46:45,851 - INFO - Loaded 2 calculations from history
+2025-06-23 22:46:45,851 - INFO - Calculator initialized with configuration
+2025-06-23 22:46:45,851 - INFO - Added observer: LoggingObserver
+2025-06-23 22:46:45,851 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:46:52,135 - INFO - Set operation: Addition
+2025-06-23 22:46:52,135 - INFO - Calculation performed: Addition (1, 1) = 2
+2025-06-23 22:46:52,158 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-23 22:46:52,158 - INFO - History auto-saved
+2025-06-23 22:56:09,954 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-27 22:53:04,003 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-27 22:53:04,026 - INFO - Loaded 2 calculations from history
+2025-06-27 22:53:04,026 - INFO - Calculator initialized with configuration
+2025-06-27 22:53:04,026 - INFO - Added observer: LoggingObserver
+2025-06-27 22:53:04,026 - INFO - Added observer: AutoSaveObserver
+2025-06-27 22:53:12,920 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-29 12:40:27,344 - INFO - Logging initialized at: /home/channah/projects/module5_is601/logs/calculator.log
+2025-06-29 12:40:27,354 - INFO - Loaded 2 calculations from history
+2025-06-29 12:40:27,354 - INFO - Calculator initialized with configuration
+2025-06-29 12:40:27,354 - INFO - Added observer: LoggingObserver
+2025-06-29 12:40:27,354 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:40:31,432 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
+2025-06-29 13:33:30,524 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-29 13:33:30,535 - INFO - Loaded 2 calculations from history
+2025-06-29 13:33:30,535 - INFO - Calculator initialized with configuration
+2025-06-29 13:33:30,535 - INFO - Added observer: LoggingObserver
+2025-06-29 13:33:30,535 - INFO - Added observer: AutoSaveObserver
+2025-06-29 13:33:35,507 - INFO - Set operation: Addition
+2025-06-29 13:33:35,508 - INFO - Calculation performed: Addition (1, 1) = 2
+2025-06-29 13:33:35,515 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-29 13:33:35,515 - INFO - History auto-saved
+2025-06-29 13:34:06,703 - INFO - Set operation: Root
+2025-06-29 13:34:06,704 - INFO - Calculation performed: Root (1E+1, 2) = 3.162277660168379522787063251598738133907318115234375
+2025-06-29 13:34:06,705 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-29 13:34:06,705 - INFO - History auto-saved
+2025-06-29 13:34:13,759 - INFO - Set operation: Power
+2025-06-29 13:34:13,760 - INFO - Calculation performed: Power (3, 3) = 27
+2025-06-29 13:34:13,761 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-29 13:34:13,761 - INFO - History auto-saved
+2025-06-29 13:34:23,114 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv

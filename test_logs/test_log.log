@@ -1,0 +1,796 @@
+2025-06-22 22:26:50,724 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:26:50,725 - INFO - No history file found - starting with empty history
+2025-06-22 22:26:50,725 - INFO - Calculator initialized with configuration
+2025-06-22 22:26:50,725 - INFO - Added observer: LoggingObserver
+2025-06-22 22:26:50,725 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:26:50,727 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:26:50,728 - INFO - No history file found - starting with empty history
+2025-06-22 22:26:50,728 - INFO - Calculator initialized with configuration
+2025-06-22 22:26:50,728 - INFO - Added observer: LoggingObserver
+2025-06-22 22:26:50,728 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:26:50,733 - INFO - Empty history saved
+2025-06-22 22:26:50,736 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:26:50,738 - INFO - Loaded empty history file
+2025-06-22 22:26:50,739 - INFO - Calculator initialized with configuration
+2025-06-22 22:26:50,739 - INFO - Added observer: LoggingObserver
+2025-06-22 22:26:50,739 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:26:50,739 - INFO - Set operation: Addition
+2025-06-22 22:26:50,739 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-22 22:26:50,741 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-22 22:26:50,797 - INFO - History auto-saved
+2025-06-22 22:57:17,292 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:57:17,294 - INFO - Loaded 1 calculations from history
+2025-06-22 22:57:17,294 - INFO - Calculator initialized with configuration
+2025-06-22 22:57:17,295 - INFO - Added observer: LoggingObserver
+2025-06-22 22:57:17,295 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:57:17,297 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:57:17,299 - INFO - Loaded 1 calculations from history
+2025-06-22 22:57:17,299 - INFO - Calculator initialized with configuration
+2025-06-22 22:57:17,299 - INFO - Added observer: LoggingObserver
+2025-06-22 22:57:17,299 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:57:17,302 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-22 22:57:17,304 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-22 22:57:17,306 - INFO - Loaded 1 calculations from history
+2025-06-22 22:57:17,306 - INFO - Calculator initialized with configuration
+2025-06-22 22:57:17,306 - INFO - Added observer: LoggingObserver
+2025-06-22 22:57:17,306 - INFO - Added observer: AutoSaveObserver
+2025-06-22 22:57:17,307 - INFO - Set operation: Addition
+2025-06-22 22:57:17,307 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-22 22:57:17,308 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-22 22:57:17,344 - INFO - History auto-saved
+2025-06-23 19:42:13,639 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 19:42:13,642 - INFO - Loaded 2 calculations from history
+2025-06-23 19:42:13,642 - INFO - Calculator initialized with configuration
+2025-06-23 19:42:13,642 - INFO - Added observer: LoggingObserver
+2025-06-23 19:42:13,642 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:42:13,645 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 19:42:13,647 - INFO - Loaded 2 calculations from history
+2025-06-23 19:42:13,647 - INFO - Calculator initialized with configuration
+2025-06-23 19:42:13,647 - INFO - Added observer: LoggingObserver
+2025-06-23 19:42:13,647 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:42:13,652 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 19:42:13,655 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 19:42:13,657 - INFO - Loaded 2 calculations from history
+2025-06-23 19:42:13,657 - INFO - Calculator initialized with configuration
+2025-06-23 19:42:13,657 - INFO - Added observer: LoggingObserver
+2025-06-23 19:42:13,657 - INFO - Added observer: AutoSaveObserver
+2025-06-23 19:42:13,657 - INFO - Set operation: Addition
+2025-06-23 19:42:13,658 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 19:42:13,659 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 19:42:13,699 - INFO - History auto-saved
+2025-06-23 20:11:53,957 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:11:53,960 - INFO - Loaded 3 calculations from history
+2025-06-23 20:11:53,960 - INFO - Calculator initialized with configuration
+2025-06-23 20:11:53,960 - INFO - Added observer: LoggingObserver
+2025-06-23 20:11:53,960 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:11:53,963 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:11:53,965 - INFO - Loaded 3 calculations from history
+2025-06-23 20:11:53,965 - INFO - Calculator initialized with configuration
+2025-06-23 20:11:53,965 - INFO - Added observer: LoggingObserver
+2025-06-23 20:11:53,965 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:11:53,970 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:11:53,972 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:11:53,975 - INFO - Loaded 3 calculations from history
+2025-06-23 20:11:53,975 - INFO - Calculator initialized with configuration
+2025-06-23 20:11:53,975 - INFO - Added observer: LoggingObserver
+2025-06-23 20:11:53,975 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:11:53,975 - INFO - Set operation: Addition
+2025-06-23 20:11:53,975 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:11:53,977 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:11:54,066 - INFO - History auto-saved
+2025-06-23 20:13:06,733 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:06,738 - INFO - Loaded 4 calculations from history
+2025-06-23 20:13:06,738 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:06,739 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:06,739 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:06,742 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:06,745 - INFO - Loaded 4 calculations from history
+2025-06-23 20:13:06,745 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:06,745 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:06,745 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:06,756 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:13:06,759 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:06,762 - INFO - Loaded 4 calculations from history
+2025-06-23 20:13:06,762 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:06,762 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:06,762 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:06,763 - INFO - Set operation: Addition
+2025-06-23 20:13:06,763 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:13:06,765 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:13:06,771 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,836 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,857 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,876 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,897 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,917 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,936 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:06,954 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,002 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,022 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,041 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,062 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,081 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,100 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,121 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,140 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,160 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,182 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,202 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,224 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,246 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,268 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,288 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,308 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,328 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,348 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,368 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,388 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,408 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,429 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,449 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:07,507 - INFO - History auto-saved
+2025-06-23 20:13:28,229 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:28,232 - INFO - Loaded 5 calculations from history
+2025-06-23 20:13:28,232 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:28,232 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:28,232 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:28,235 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:28,237 - INFO - Loaded 5 calculations from history
+2025-06-23 20:13:28,237 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:28,237 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:28,237 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:28,240 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:13:28,242 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:13:28,245 - INFO - Loaded 5 calculations from history
+2025-06-23 20:13:28,245 - INFO - Calculator initialized with configuration
+2025-06-23 20:13:28,245 - INFO - Added observer: LoggingObserver
+2025-06-23 20:13:28,245 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:13:28,245 - INFO - Set operation: Addition
+2025-06-23 20:13:28,246 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:13:28,247 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:13:28,253 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,310 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,328 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,347 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,391 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,409 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,429 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,447 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,466 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,484 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,503 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,522 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,541 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,560 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,579 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,597 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,617 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,638 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,659 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,680 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,700 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,721 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,740 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,759 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,778 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,798 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,816 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,835 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,854 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,873 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,892 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:13:28,948 - INFO - History auto-saved
+2025-06-23 20:14:18,250 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:14:18,253 - INFO - Loaded 6 calculations from history
+2025-06-23 20:14:18,254 - INFO - Calculator initialized with configuration
+2025-06-23 20:14:18,254 - INFO - Added observer: LoggingObserver
+2025-06-23 20:14:18,254 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:14:18,258 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:14:18,260 - INFO - Loaded 6 calculations from history
+2025-06-23 20:14:18,260 - INFO - Calculator initialized with configuration
+2025-06-23 20:14:18,260 - INFO - Added observer: LoggingObserver
+2025-06-23 20:14:18,260 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:14:18,264 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:14:18,267 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:14:18,269 - INFO - Loaded 6 calculations from history
+2025-06-23 20:14:18,269 - INFO - Calculator initialized with configuration
+2025-06-23 20:14:18,269 - INFO - Added observer: LoggingObserver
+2025-06-23 20:14:18,269 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:14:18,270 - INFO - Set operation: Addition
+2025-06-23 20:14:18,270 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:14:18,284 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:14:18,290 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,349 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,369 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,388 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,406 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,426 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,446 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,465 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,484 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,528 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,546 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,565 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,584 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,603 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,623 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,642 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,662 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,682 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,701 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,721 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,742 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,763 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,781 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,800 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,821 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,841 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,861 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,880 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,899 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,917 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,936 - ERROR - Fatal error in calculator REPL: Calculator must have 'config' and 'save_history' attributes
+2025-06-23 20:14:18,991 - INFO - History auto-saved
+2025-06-23 20:18:34,475 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:18:34,478 - INFO - Loaded 7 calculations from history
+2025-06-23 20:18:34,478 - INFO - Calculator initialized with configuration
+2025-06-23 20:18:34,478 - INFO - Added observer: LoggingObserver
+2025-06-23 20:18:34,478 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:18:34,481 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:18:34,484 - INFO - Loaded 7 calculations from history
+2025-06-23 20:18:34,484 - INFO - Calculator initialized with configuration
+2025-06-23 20:18:34,484 - INFO - Added observer: LoggingObserver
+2025-06-23 20:18:34,484 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:18:34,486 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:18:34,489 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:18:34,492 - INFO - Loaded 7 calculations from history
+2025-06-23 20:18:34,492 - INFO - Calculator initialized with configuration
+2025-06-23 20:18:34,492 - INFO - Added observer: LoggingObserver
+2025-06-23 20:18:34,492 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:18:34,492 - INFO - Set operation: Addition
+2025-06-23 20:18:34,492 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:18:34,494 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:18:35,147 - INFO - History auto-saved
+2025-06-23 20:21:47,475 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:21:47,477 - INFO - Loaded 8 calculations from history
+2025-06-23 20:21:47,478 - INFO - Calculator initialized with configuration
+2025-06-23 20:21:47,478 - INFO - Added observer: LoggingObserver
+2025-06-23 20:21:47,478 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:21:47,480 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:21:47,483 - INFO - Loaded 8 calculations from history
+2025-06-23 20:21:47,483 - INFO - Calculator initialized with configuration
+2025-06-23 20:21:47,483 - INFO - Added observer: LoggingObserver
+2025-06-23 20:21:47,483 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:21:47,486 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:21:47,488 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:21:47,491 - INFO - Loaded 8 calculations from history
+2025-06-23 20:21:47,491 - INFO - Calculator initialized with configuration
+2025-06-23 20:21:47,491 - INFO - Added observer: LoggingObserver
+2025-06-23 20:21:47,492 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:21:47,492 - INFO - Set operation: Addition
+2025-06-23 20:21:47,492 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:21:47,494 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:22:10,070 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:10,074 - INFO - Loaded 9 calculations from history
+2025-06-23 20:22:10,074 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:10,074 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:10,074 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:10,077 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:10,080 - INFO - Loaded 9 calculations from history
+2025-06-23 20:22:10,080 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:10,080 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:10,080 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:10,083 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:22:10,085 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:10,088 - INFO - Loaded 9 calculations from history
+2025-06-23 20:22:10,088 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:10,088 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:10,088 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:10,089 - INFO - Set operation: Addition
+2025-06-23 20:22:10,089 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:22:10,090 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:22:46,078 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:46,081 - INFO - Loaded 10 calculations from history
+2025-06-23 20:22:46,081 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:46,081 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:46,081 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:46,084 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:46,087 - INFO - Loaded 10 calculations from history
+2025-06-23 20:22:46,087 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:46,087 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:46,087 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:46,090 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 20:22:46,093 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 20:22:46,096 - INFO - Loaded 10 calculations from history
+2025-06-23 20:22:46,096 - INFO - Calculator initialized with configuration
+2025-06-23 20:22:46,096 - INFO - Added observer: LoggingObserver
+2025-06-23 20:22:46,096 - INFO - Added observer: AutoSaveObserver
+2025-06-23 20:22:46,096 - INFO - Set operation: Addition
+2025-06-23 20:22:46,097 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 20:22:46,111 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:06:12,137 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:06:12,141 - INFO - Loaded 11 calculations from history
+2025-06-23 21:06:12,141 - INFO - Calculator initialized with configuration
+2025-06-23 21:06:12,142 - INFO - Added observer: LoggingObserver
+2025-06-23 21:06:12,142 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:06:12,144 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:06:12,147 - INFO - Loaded 11 calculations from history
+2025-06-23 21:06:12,147 - INFO - Calculator initialized with configuration
+2025-06-23 21:06:12,147 - INFO - Added observer: LoggingObserver
+2025-06-23 21:06:12,147 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:06:12,151 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:06:12,154 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:06:12,157 - INFO - Loaded 11 calculations from history
+2025-06-23 21:06:12,157 - INFO - Calculator initialized with configuration
+2025-06-23 21:06:12,157 - INFO - Added observer: LoggingObserver
+2025-06-23 21:06:12,157 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:06:12,157 - INFO - Set operation: Addition
+2025-06-23 21:06:12,157 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:06:12,159 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:08:42,714 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:08:42,717 - INFO - Loaded 12 calculations from history
+2025-06-23 21:08:42,717 - INFO - Calculator initialized with configuration
+2025-06-23 21:08:42,718 - INFO - Added observer: LoggingObserver
+2025-06-23 21:08:42,718 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:08:42,720 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:08:42,723 - INFO - Loaded 12 calculations from history
+2025-06-23 21:08:42,723 - INFO - Calculator initialized with configuration
+2025-06-23 21:08:42,723 - INFO - Added observer: LoggingObserver
+2025-06-23 21:08:42,724 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:08:42,728 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:08:42,731 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:08:42,734 - INFO - Loaded 12 calculations from history
+2025-06-23 21:08:42,734 - INFO - Calculator initialized with configuration
+2025-06-23 21:08:42,734 - INFO - Added observer: LoggingObserver
+2025-06-23 21:08:42,734 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:08:42,735 - INFO - Set operation: Addition
+2025-06-23 21:08:42,735 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:08:42,736 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:11:59,723 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:11:59,727 - INFO - Loaded 13 calculations from history
+2025-06-23 21:11:59,727 - INFO - Calculator initialized with configuration
+2025-06-23 21:11:59,727 - INFO - Added observer: LoggingObserver
+2025-06-23 21:11:59,727 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:11:59,730 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:11:59,733 - INFO - Loaded 13 calculations from history
+2025-06-23 21:11:59,733 - INFO - Calculator initialized with configuration
+2025-06-23 21:11:59,733 - INFO - Added observer: LoggingObserver
+2025-06-23 21:11:59,733 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:11:59,736 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:11:59,739 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:11:59,742 - INFO - Loaded 13 calculations from history
+2025-06-23 21:11:59,742 - INFO - Calculator initialized with configuration
+2025-06-23 21:11:59,742 - INFO - Added observer: LoggingObserver
+2025-06-23 21:11:59,742 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:11:59,742 - INFO - Set operation: Addition
+2025-06-23 21:11:59,742 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:11:59,744 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:12:43,422 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:12:43,426 - INFO - Loaded 14 calculations from history
+2025-06-23 21:12:43,427 - INFO - Calculator initialized with configuration
+2025-06-23 21:12:43,427 - INFO - Added observer: LoggingObserver
+2025-06-23 21:12:43,427 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:12:43,429 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:12:43,433 - INFO - Loaded 14 calculations from history
+2025-06-23 21:12:43,433 - INFO - Calculator initialized with configuration
+2025-06-23 21:12:43,433 - INFO - Added observer: LoggingObserver
+2025-06-23 21:12:43,433 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:12:43,436 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:12:43,439 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:12:43,442 - INFO - Loaded 14 calculations from history
+2025-06-23 21:12:43,442 - INFO - Calculator initialized with configuration
+2025-06-23 21:12:43,442 - INFO - Added observer: LoggingObserver
+2025-06-23 21:12:43,442 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:12:43,442 - INFO - Set operation: Addition
+2025-06-23 21:12:43,443 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:12:43,444 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:15:38,174 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:15:38,177 - INFO - Loaded 15 calculations from history
+2025-06-23 21:15:38,177 - INFO - Calculator initialized with configuration
+2025-06-23 21:15:38,177 - INFO - Added observer: LoggingObserver
+2025-06-23 21:15:38,177 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:15:38,180 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:15:38,183 - INFO - Loaded 15 calculations from history
+2025-06-23 21:15:38,183 - INFO - Calculator initialized with configuration
+2025-06-23 21:15:38,183 - INFO - Added observer: LoggingObserver
+2025-06-23 21:15:38,183 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:15:38,186 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:15:38,189 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:15:38,192 - INFO - Loaded 15 calculations from history
+2025-06-23 21:15:38,192 - INFO - Calculator initialized with configuration
+2025-06-23 21:15:38,192 - INFO - Added observer: LoggingObserver
+2025-06-23 21:15:38,192 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:15:38,193 - INFO - Set operation: Addition
+2025-06-23 21:15:38,193 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:15:38,195 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:18:56,925 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:18:56,929 - INFO - Loaded 16 calculations from history
+2025-06-23 21:18:56,929 - INFO - Calculator initialized with configuration
+2025-06-23 21:18:56,929 - INFO - Added observer: LoggingObserver
+2025-06-23 21:18:56,929 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:18:56,932 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:18:56,935 - INFO - Loaded 16 calculations from history
+2025-06-23 21:18:56,935 - INFO - Calculator initialized with configuration
+2025-06-23 21:18:56,935 - INFO - Added observer: LoggingObserver
+2025-06-23 21:18:56,935 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:18:56,938 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:18:56,941 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:18:56,944 - INFO - Loaded 16 calculations from history
+2025-06-23 21:18:56,944 - INFO - Calculator initialized with configuration
+2025-06-23 21:18:56,944 - INFO - Added observer: LoggingObserver
+2025-06-23 21:18:56,944 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:18:56,945 - INFO - Set operation: Addition
+2025-06-23 21:18:56,945 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:18:56,947 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:22:43,457 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:22:43,461 - INFO - Loaded 17 calculations from history
+2025-06-23 21:22:43,461 - INFO - Calculator initialized with configuration
+2025-06-23 21:22:43,461 - INFO - Added observer: LoggingObserver
+2025-06-23 21:22:43,461 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:22:43,464 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:22:43,467 - INFO - Loaded 17 calculations from history
+2025-06-23 21:22:43,467 - INFO - Calculator initialized with configuration
+2025-06-23 21:22:43,467 - INFO - Added observer: LoggingObserver
+2025-06-23 21:22:43,468 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:22:43,470 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:22:43,473 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:22:43,476 - INFO - Loaded 17 calculations from history
+2025-06-23 21:22:43,476 - INFO - Calculator initialized with configuration
+2025-06-23 21:22:43,476 - INFO - Added observer: LoggingObserver
+2025-06-23 21:22:43,476 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:22:43,477 - INFO - Set operation: Addition
+2025-06-23 21:22:43,477 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:22:43,479 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:26:12,643 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:12,647 - INFO - Loaded 18 calculations from history
+2025-06-23 21:26:12,647 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:12,647 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:12,647 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:12,650 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:12,654 - INFO - Loaded 18 calculations from history
+2025-06-23 21:26:12,654 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:12,654 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:12,654 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:12,657 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:26:12,660 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:12,664 - INFO - Loaded 18 calculations from history
+2025-06-23 21:26:12,664 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:12,664 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:12,664 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:12,664 - INFO - Set operation: Addition
+2025-06-23 21:26:12,664 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:26:12,666 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:26:53,153 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:53,157 - INFO - Loaded 19 calculations from history
+2025-06-23 21:26:53,157 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:53,157 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:53,157 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:53,160 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:53,164 - INFO - Loaded 19 calculations from history
+2025-06-23 21:26:53,164 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:53,164 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:53,164 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:53,168 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:26:53,171 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:26:53,175 - INFO - Loaded 19 calculations from history
+2025-06-23 21:26:53,175 - INFO - Calculator initialized with configuration
+2025-06-23 21:26:53,175 - INFO - Added observer: LoggingObserver
+2025-06-23 21:26:53,175 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:26:53,176 - INFO - Set operation: Addition
+2025-06-23 21:26:53,176 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:26:53,188 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:28:27,701 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:28:27,705 - INFO - Loaded 20 calculations from history
+2025-06-23 21:28:27,705 - INFO - Calculator initialized with configuration
+2025-06-23 21:28:27,705 - INFO - Added observer: LoggingObserver
+2025-06-23 21:28:27,705 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:28:27,708 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:28:27,712 - INFO - Loaded 20 calculations from history
+2025-06-23 21:28:27,712 - INFO - Calculator initialized with configuration
+2025-06-23 21:28:27,712 - INFO - Added observer: LoggingObserver
+2025-06-23 21:28:27,712 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:28:27,715 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:28:27,717 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:28:27,721 - INFO - Loaded 20 calculations from history
+2025-06-23 21:28:27,721 - INFO - Calculator initialized with configuration
+2025-06-23 21:28:27,721 - INFO - Added observer: LoggingObserver
+2025-06-23 21:28:27,721 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:28:27,722 - INFO - Set operation: Addition
+2025-06-23 21:28:27,722 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:28:27,736 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:40:36,670 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:40:36,675 - INFO - Loaded 21 calculations from history
+2025-06-23 21:40:36,675 - INFO - Calculator initialized with configuration
+2025-06-23 21:40:36,675 - INFO - Added observer: LoggingObserver
+2025-06-23 21:40:36,675 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:40:36,678 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:40:36,682 - INFO - Loaded 21 calculations from history
+2025-06-23 21:40:36,683 - INFO - Calculator initialized with configuration
+2025-06-23 21:40:36,683 - INFO - Added observer: LoggingObserver
+2025-06-23 21:40:36,683 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:40:36,687 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:40:36,690 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:40:36,694 - INFO - Loaded 21 calculations from history
+2025-06-23 21:40:36,694 - INFO - Calculator initialized with configuration
+2025-06-23 21:40:36,694 - INFO - Added observer: LoggingObserver
+2025-06-23 21:40:36,694 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:40:36,695 - INFO - Set operation: Addition
+2025-06-23 21:40:36,695 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:40:36,697 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:45:26,364 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:45:26,370 - INFO - Loaded 22 calculations from history
+2025-06-23 21:45:26,370 - INFO - Calculator initialized with configuration
+2025-06-23 21:45:26,370 - INFO - Added observer: LoggingObserver
+2025-06-23 21:45:26,370 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:45:26,373 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:45:26,377 - INFO - Loaded 22 calculations from history
+2025-06-23 21:45:26,377 - INFO - Calculator initialized with configuration
+2025-06-23 21:45:26,377 - INFO - Added observer: LoggingObserver
+2025-06-23 21:45:26,377 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:45:26,381 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:45:26,384 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:45:26,388 - INFO - Loaded 22 calculations from history
+2025-06-23 21:45:26,388 - INFO - Calculator initialized with configuration
+2025-06-23 21:45:26,388 - INFO - Added observer: LoggingObserver
+2025-06-23 21:45:26,388 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:45:26,388 - INFO - Set operation: Addition
+2025-06-23 21:45:26,388 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:45:26,390 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:46:52,691 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:46:52,695 - INFO - Loaded 23 calculations from history
+2025-06-23 21:46:52,695 - INFO - Calculator initialized with configuration
+2025-06-23 21:46:52,696 - INFO - Added observer: LoggingObserver
+2025-06-23 21:46:52,696 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:46:52,698 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:46:52,702 - INFO - Loaded 23 calculations from history
+2025-06-23 21:46:52,702 - INFO - Calculator initialized with configuration
+2025-06-23 21:46:52,702 - INFO - Added observer: LoggingObserver
+2025-06-23 21:46:52,702 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:46:52,705 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:46:52,709 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:46:52,713 - INFO - Loaded 23 calculations from history
+2025-06-23 21:46:52,713 - INFO - Calculator initialized with configuration
+2025-06-23 21:46:52,713 - INFO - Added observer: LoggingObserver
+2025-06-23 21:46:52,713 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:46:52,713 - INFO - Set operation: Addition
+2025-06-23 21:46:52,713 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:46:52,715 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:47:23,145 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:47:23,150 - INFO - Loaded 24 calculations from history
+2025-06-23 21:47:23,150 - INFO - Calculator initialized with configuration
+2025-06-23 21:47:23,150 - INFO - Added observer: LoggingObserver
+2025-06-23 21:47:23,150 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:47:23,153 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:47:23,157 - INFO - Loaded 24 calculations from history
+2025-06-23 21:47:23,157 - INFO - Calculator initialized with configuration
+2025-06-23 21:47:23,157 - INFO - Added observer: LoggingObserver
+2025-06-23 21:47:23,158 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:47:23,160 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:47:23,163 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:47:23,167 - INFO - Loaded 24 calculations from history
+2025-06-23 21:47:23,167 - INFO - Calculator initialized with configuration
+2025-06-23 21:47:23,167 - INFO - Added observer: LoggingObserver
+2025-06-23 21:47:23,167 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:47:23,167 - INFO - Set operation: Addition
+2025-06-23 21:47:23,167 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:47:23,169 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:51:48,248 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:51:48,253 - INFO - Loaded 25 calculations from history
+2025-06-23 21:51:48,253 - INFO - Calculator initialized with configuration
+2025-06-23 21:51:48,253 - INFO - Added observer: LoggingObserver
+2025-06-23 21:51:48,253 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:51:48,256 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:51:48,260 - INFO - Loaded 25 calculations from history
+2025-06-23 21:51:48,260 - INFO - Calculator initialized with configuration
+2025-06-23 21:51:48,260 - INFO - Added observer: LoggingObserver
+2025-06-23 21:51:48,260 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:51:48,263 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:51:48,265 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:51:48,269 - INFO - Loaded 25 calculations from history
+2025-06-23 21:51:48,269 - INFO - Calculator initialized with configuration
+2025-06-23 21:51:48,269 - INFO - Added observer: LoggingObserver
+2025-06-23 21:51:48,269 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:51:48,270 - INFO - Set operation: Addition
+2025-06-23 21:51:48,270 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:51:48,271 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:51:48,761 - INFO - History auto-saved
+2025-06-23 21:55:06,933 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:55:06,938 - INFO - Loaded 26 calculations from history
+2025-06-23 21:55:06,938 - INFO - Calculator initialized with configuration
+2025-06-23 21:55:06,938 - INFO - Added observer: LoggingObserver
+2025-06-23 21:55:06,938 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:55:06,941 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:55:06,945 - INFO - Loaded 26 calculations from history
+2025-06-23 21:55:06,945 - INFO - Calculator initialized with configuration
+2025-06-23 21:55:06,946 - INFO - Added observer: LoggingObserver
+2025-06-23 21:55:06,946 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:55:06,948 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:55:06,951 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:55:06,955 - INFO - Loaded 26 calculations from history
+2025-06-23 21:55:06,955 - INFO - Calculator initialized with configuration
+2025-06-23 21:55:06,955 - INFO - Added observer: LoggingObserver
+2025-06-23 21:55:06,955 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:55:06,955 - INFO - Set operation: Addition
+2025-06-23 21:55:06,956 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:55:06,957 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:55:07,456 - INFO - History auto-saved
+2025-06-23 21:56:46,134 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:56:46,138 - INFO - Loaded 27 calculations from history
+2025-06-23 21:56:46,139 - INFO - Calculator initialized with configuration
+2025-06-23 21:56:46,139 - INFO - Added observer: LoggingObserver
+2025-06-23 21:56:46,139 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:56:46,141 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:56:46,145 - INFO - Loaded 27 calculations from history
+2025-06-23 21:56:46,145 - INFO - Calculator initialized with configuration
+2025-06-23 21:56:46,145 - INFO - Added observer: LoggingObserver
+2025-06-23 21:56:46,146 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:56:46,149 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:56:46,151 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 21:56:46,156 - INFO - Loaded 27 calculations from history
+2025-06-23 21:56:46,156 - INFO - Calculator initialized with configuration
+2025-06-23 21:56:46,156 - INFO - Added observer: LoggingObserver
+2025-06-23 21:56:46,156 - INFO - Added observer: AutoSaveObserver
+2025-06-23 21:56:46,156 - INFO - Set operation: Addition
+2025-06-23 21:56:46,157 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 21:56:46,158 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 21:56:46,389 - INFO - History auto-saved
+2025-06-23 22:02:06,746 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:02:06,752 - INFO - Loaded 28 calculations from history
+2025-06-23 22:02:06,752 - INFO - Calculator initialized with configuration
+2025-06-23 22:02:06,752 - INFO - Added observer: LoggingObserver
+2025-06-23 22:02:06,752 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:02:06,755 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:02:06,760 - INFO - Loaded 28 calculations from history
+2025-06-23 22:02:06,760 - INFO - Calculator initialized with configuration
+2025-06-23 22:02:06,760 - INFO - Added observer: LoggingObserver
+2025-06-23 22:02:06,760 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:02:06,765 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:02:06,768 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:02:06,773 - INFO - Loaded 28 calculations from history
+2025-06-23 22:02:06,773 - INFO - Calculator initialized with configuration
+2025-06-23 22:02:06,773 - INFO - Added observer: LoggingObserver
+2025-06-23 22:02:06,773 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:02:06,773 - INFO - Set operation: Addition
+2025-06-23 22:02:06,773 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 22:02:06,775 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:02:07,047 - INFO - History auto-saved
+2025-06-23 22:03:02,725 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:02,732 - INFO - Loaded 29 calculations from history
+2025-06-23 22:03:02,732 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:02,733 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:02,733 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:02,737 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:02,742 - INFO - Loaded 29 calculations from history
+2025-06-23 22:03:02,742 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:02,742 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:02,742 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:02,749 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:03:02,752 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:02,757 - INFO - Loaded 29 calculations from history
+2025-06-23 22:03:02,758 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:02,758 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:02,758 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:02,758 - INFO - Set operation: Addition
+2025-06-23 22:03:02,758 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 22:03:02,760 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:03:02,994 - INFO - History auto-saved
+2025-06-23 22:03:21,900 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:21,905 - INFO - Loaded 30 calculations from history
+2025-06-23 22:03:21,905 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:21,905 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:21,905 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:21,908 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:21,912 - INFO - Loaded 30 calculations from history
+2025-06-23 22:03:21,912 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:21,912 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:21,912 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:21,915 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:03:21,917 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:03:21,921 - INFO - Loaded 30 calculations from history
+2025-06-23 22:03:21,922 - INFO - Calculator initialized with configuration
+2025-06-23 22:03:21,922 - INFO - Added observer: LoggingObserver
+2025-06-23 22:03:21,922 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:03:21,922 - INFO - Set operation: Addition
+2025-06-23 22:03:21,922 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 22:03:21,924 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:03:22,150 - INFO - History auto-saved
+2025-06-23 22:09:22,414 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:09:22,420 - INFO - Loaded 31 calculations from history
+2025-06-23 22:09:22,420 - INFO - Calculator initialized with configuration
+2025-06-23 22:09:22,420 - INFO - Added observer: LoggingObserver
+2025-06-23 22:09:22,420 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:09:22,423 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:09:22,428 - INFO - Loaded 31 calculations from history
+2025-06-23 22:09:22,428 - INFO - Calculator initialized with configuration
+2025-06-23 22:09:22,428 - INFO - Added observer: LoggingObserver
+2025-06-23 22:09:22,429 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:09:22,433 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:09:22,435 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-23 22:09:22,440 - INFO - Loaded 31 calculations from history
+2025-06-23 22:09:22,441 - INFO - Calculator initialized with configuration
+2025-06-23 22:09:22,441 - INFO - Added observer: LoggingObserver
+2025-06-23 22:09:22,441 - INFO - Added observer: AutoSaveObserver
+2025-06-23 22:09:22,441 - INFO - Set operation: Addition
+2025-06-23 22:09:22,441 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-23 22:09:22,443 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-23 22:09:23,517 - INFO - History auto-saved
+2025-06-27 22:52:47,691 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-27 22:52:47,697 - INFO - Loaded 32 calculations from history
+2025-06-27 22:52:47,697 - INFO - Calculator initialized with configuration
+2025-06-27 22:52:47,697 - INFO - Added observer: LoggingObserver
+2025-06-27 22:52:47,697 - INFO - Added observer: AutoSaveObserver
+2025-06-27 22:52:47,700 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-27 22:52:47,704 - INFO - Loaded 32 calculations from history
+2025-06-27 22:52:47,705 - INFO - Calculator initialized with configuration
+2025-06-27 22:52:47,705 - INFO - Added observer: LoggingObserver
+2025-06-27 22:52:47,705 - INFO - Added observer: AutoSaveObserver
+2025-06-27 22:52:47,709 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-27 22:52:47,711 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-27 22:52:47,715 - INFO - Loaded 32 calculations from history
+2025-06-27 22:52:47,716 - INFO - Calculator initialized with configuration
+2025-06-27 22:52:47,716 - INFO - Added observer: LoggingObserver
+2025-06-27 22:52:47,716 - INFO - Added observer: AutoSaveObserver
+2025-06-27 22:52:47,716 - INFO - Set operation: Addition
+2025-06-27 22:52:47,716 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-27 22:52:47,718 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-27 22:52:47,935 - INFO - History auto-saved
+2025-06-29 12:40:36,154 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:40:36,160 - INFO - Loaded 33 calculations from history
+2025-06-29 12:40:36,160 - INFO - Calculator initialized with configuration
+2025-06-29 12:40:36,160 - INFO - Added observer: LoggingObserver
+2025-06-29 12:40:36,160 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:40:36,163 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:40:36,168 - INFO - Loaded 33 calculations from history
+2025-06-29 12:40:36,168 - INFO - Calculator initialized with configuration
+2025-06-29 12:40:36,168 - INFO - Added observer: LoggingObserver
+2025-06-29 12:40:36,168 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:40:36,172 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-29 12:40:36,174 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:40:36,180 - INFO - Loaded 33 calculations from history
+2025-06-29 12:40:36,180 - INFO - Calculator initialized with configuration
+2025-06-29 12:40:36,180 - INFO - Added observer: LoggingObserver
+2025-06-29 12:40:36,180 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:40:36,181 - INFO - Set operation: Addition
+2025-06-29 12:40:36,181 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-29 12:40:36,183 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-29 12:40:36,491 - INFO - History auto-saved
+2025-06-29 12:54:50,163 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:54:50,169 - INFO - Loaded 34 calculations from history
+2025-06-29 12:54:50,169 - INFO - Calculator initialized with configuration
+2025-06-29 12:54:50,169 - INFO - Added observer: LoggingObserver
+2025-06-29 12:54:50,169 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:54:50,172 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:54:50,178 - INFO - Loaded 34 calculations from history
+2025-06-29 12:54:50,178 - INFO - Calculator initialized with configuration
+2025-06-29 12:54:50,178 - INFO - Added observer: LoggingObserver
+2025-06-29 12:54:50,178 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:54:50,184 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-29 12:54:50,186 - INFO - Logging initialized at: /home/channah/projects/module5_is601/test_logs/test_log.log
+2025-06-29 12:54:50,191 - INFO - Loaded 34 calculations from history
+2025-06-29 12:54:50,191 - INFO - Calculator initialized with configuration
+2025-06-29 12:54:50,191 - INFO - Added observer: LoggingObserver
+2025-06-29 12:54:50,192 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:54:50,192 - INFO - Set operation: Addition
+2025-06-29 12:54:50,192 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-29 12:54:50,195 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
+2025-06-29 12:54:50,430 - INFO - History auto-saved
+2025-06-29 12:59:45,207 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 12:59:45,213 - INFO - Loaded 35 calculations from history
+2025-06-29 12:59:45,213 - INFO - Calculator initialized with configuration
+2025-06-29 12:59:45,213 - INFO - Added observer: LoggingObserver
+2025-06-29 12:59:45,213 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:59:45,216 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 12:59:45,221 - INFO - Loaded 35 calculations from history
+2025-06-29 12:59:45,221 - INFO - Calculator initialized with configuration
+2025-06-29 12:59:45,221 - INFO - Added observer: LoggingObserver
+2025-06-29 12:59:45,221 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:59:45,224 - INFO - History saved successfully to /home/channah/projects/CalProject/test_history/test_history.csv
+2025-06-29 12:59:45,226 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 12:59:45,231 - INFO - Loaded 35 calculations from history
+2025-06-29 12:59:45,231 - INFO - Calculator initialized with configuration
+2025-06-29 12:59:45,231 - INFO - Added observer: LoggingObserver
+2025-06-29 12:59:45,231 - INFO - Added observer: AutoSaveObserver
+2025-06-29 12:59:45,232 - INFO - Set operation: Addition
+2025-06-29 12:59:45,232 - INFO - Calculation performed: Addition (2, 3) = 5
+2025-06-29 12:59:45,234 - INFO - History saved successfully to /home/channah/projects/CalProject/test_history/test_history.csv
+2025-06-29 12:59:45,439 - INFO - History auto-saved
