@@ -5,10 +5,10 @@ name: Python Application CI
 on:
   push:
     branches:
-      - main  # Run tests on any push to the main branch
+      - master  # Run tests on any push to the main branch
   pull_request:
     branches:
-      - main  # Run tests on any pull request to the main branch
+      - master  # Run tests on any pull request to the main branch
 
 jobs:
   build:
