@@ -1,5 +1,4 @@
 # tests/test_calculator.py 
-
 import datetime
 from pathlib import Path
 import pandas as pd
@@ -19,7 +18,7 @@ from app.operations import OperationFactory, Addition, Subtraction # Import spec
 
 # Fixture to initialize Calculator with a temporary directory for file paths
 @pytest.fixture
-def calculator(mocker): # ADDED 'mocker' fixture here
+def calculator(mocker): # 'mocker' is correctly injected here
     with TemporaryDirectory() as temp_dir:
         temp_path = Path(temp_dir)
         # Create a mock config object instead of a real one, to control attributes directly
@@ -62,7 +61,7 @@ def test_calculator_initialization(calculator):
 @patch('app.calculator.logging.info')
 @patch('app.calculator.os.makedirs') # Mock makedirs in app.calculator
 @patch('app.calculator.logging.basicConfig') # Mock basicConfig itself
-def test_logging_setup(mock_basicConfig, mock_makedirs, logging_info_mock, mocker): # ADDED 'mocker' here
+def test_logging_setup(mock_basicConfig, mock_makedirs, logging_info_mock, mocker): # 'mocker' is correctly injected here
     with TemporaryDirectory() as temp_dir:
         temp_path = Path(temp_dir)
         # Create a mock config object to pass to Calculator
@@ -101,7 +100,7 @@ def test_logging_setup(mock_basicConfig, mock_makedirs, logging_info_mock, mocke
 
 # Test Adding and Removing Observers
 
-def test_add_observer(calculator, mocker): # ADDED 'mocker' here
+def test_add_observer(calculator, mocker): # 'mocker' is correctly injected here
     observer = LoggingObserver()
     calculator.add_observer(observer)
     assert observer in calculator.observers
@@ -109,7 +108,7 @@ def test_add_observer(calculator, mocker): # ADDED 'mocker' here
     calculator.add_observer(observer)
     assert calculator.observers.count(observer) == 1
 
-def test_remove_observer(calculator, mocker): # ADDED 'mocker' here
+def test_remove_observer(calculator, mocker): # 'mocker' is correctly injected here
     observer = LoggingObserver()
     calculator.add_observer(observer)
     calculator.remove_observer(observer)
