@@ -232,3 +232,21 @@ AttributeError: 'AnsiFore' object has no attribute 'BRIGHT_GREEN'
 2025-06-30 02:43:37,084 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
 2025-06-30 02:43:37,084 - INFO - History auto-saved
 2025-06-30 02:43:41,237 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:48:52,605 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 02:48:52,612 - INFO - Loaded 17 calculations from history
+2025-06-30 02:48:52,612 - INFO - Calculator initialized with configuration
+2025-06-30 02:48:52,612 - INFO - Added observer: LoggingObserver
+2025-06-30 02:48:52,612 - INFO - Added observer: AutoSaveObserver
+2025-06-30 02:49:03,560 - INFO - Set operation strategy to: Addition (command: add)
+2025-06-30 02:49:03,560 - INFO - Calculation performed: add (5E+1, 5E+1) = 1.0E+2
+2025-06-30 02:49:03,583 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:49:03,583 - INFO - History auto-saved
+2025-06-30 02:49:13,185 - INFO - Set operation strategy to: Addition (command: add)
+2025-06-30 02:49:13,186 - INFO - Calculation performed: add (4, 4) = 8
+2025-06-30 02:49:13,187 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:49:13,187 - INFO - History auto-saved
+2025-06-30 02:49:21,926 - INFO - Set operation strategy to: Power (command: power)
+2025-06-30 02:49:21,926 - INFO - Calculation performed: power (3, 56) = 523347633027360566982737920
+2025-06-30 02:49:21,927 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:49:21,928 - INFO - History auto-saved
+2025-06-30 02:49:25,885 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
