@@ -359,4 +359,3 @@ def test_clear_history(calculator):
     assert calculator.undo_stack == []
     assert calculator.redo_stack == []
 
-# REPL tests are handled in tests/test_calculator_repl.py
