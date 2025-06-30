@@ -27,8 +27,8 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # pytest and pytest-cov are already in your requirements.txt,
-          # so no need to install them separately here unless you want to be redundant.
+          # Explicitly install pytest-mock to ensure 'mocker' fixture is available
+          pip install pytest-mock # ADDED THIS LINE
 
       - name: Set up .env variables for testing # CRITICAL NEW STEP
         # This step creates a .env file on the GitHub Actions runner
