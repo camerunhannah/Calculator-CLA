@@ -1,9 +1,7 @@
-########################
-# Calculator Config    #
-########################
+# app/calculator_config.py (Full Code)
 
-from dataclasses import dataclass
-from decimal import Decimal
+from dataclasses import dataclass, field
+from decimal import Decimal, InvalidOperation # Import InvalidOperation
 from numbers import Number
 from pathlib import Path
 import os
@@ -20,157 +18,78 @@ load_dotenv()
 def get_project_root() -> Path:
     """
     Get the project root directory.
-
-    This function determines the root directory of the project by navigating up
-    the directory hierarchy from the current file's location.
-
-    Returns:
-        Path: The root directory path of the project.
     """
-    # Get the directory of the current file (app/calculator_config.py)
     current_file = Path(__file__)
-    # Navigate up two levels to reach the project root (from app/calculator_config.py to project root)
     return current_file.parent.parent
+
+# Helper for robust Decimal parsing from environment
+def _parse_decimal_from_env(env_var: str, default_value: str) -> Decimal:
+    value_str = os.getenv(env_var, default_value)
+    try:
+        return Decimal(value_str)
+    except InvalidOperation as e:
+        raise ConfigurationError(f"Environment variable '{env_var}' has an invalid number format: '{value_str}'") from e
+
+# Helper for robust boolean parsing from environment
+def _parse_bool_from_env(env_var: str, default_value: str) -> bool:
+    value_str = os.getenv(env_var, default_value).lower()
+    # Define a set of "truthy" strings
+    true_strings = {'true', '1', 'yes', 'on'}
+    return value_str in true_strings
 
 
 @dataclass
 class CalculatorConfig:
     """
     Calculator configuration settings.
-
-    This class manages all configuration parameters required by the calculator
-    application, including directory paths, history size, auto-save preferences,
-    calculation precision, maximum input values, and default encoding.
-
-    Configuration can be set via environment variables or by passing parameters
-    directly to the class constructor.
     """
+    base_dir: Path = field(
+        default_factory=lambda: Path(os.getenv('CALCULATOR_BASE_DIR', str(get_project_root()))).resolve()
+    )
 
-    def __init__(
-        self,
-        base_dir: Optional[Path] = None,
-        max_history_size: Optional[int] = None,
-        auto_save: Optional[bool] = None,
-        precision: Optional[int] = None,
-        max_input_value: Optional[Number] = None,
-        default_encoding: Optional[str] = None
-    ):
+    log_dir_name: str = field(default_factory=lambda: os.getenv('CALCULATOR_LOG_DIR', 'logs'))
+    log_file_name: str = field(default_factory=lambda: os.getenv('CALCULATOR_LOG_FILE', 'calculator.log'))
+    
+    history_dir_name: str = field(default_factory=lambda: os.getenv('CALCULATOR_HISTORY_DIR', 'history'))
+    history_file_name: str = field(default_factory=lambda: os.getenv('CALCULATOR_HISTORY_FILE', 'calculator_history.csv'))
+
+    max_history_size: int = field(default_factory=lambda: int(os.getenv('CALCULATOR_MAX_HISTORY_SIZE', '1000')))
+    auto_save: bool = field(default_factory=lambda: _parse_bool_from_env('CALCULATOR_AUTO_SAVE', 'true'))
+
+    precision: int = field(default_factory=lambda: int(os.getenv('CALCULATOR_PRECISION', '10')))
+    max_input_value: Decimal = field(default_factory=lambda: _parse_decimal_from_env('CALCULATOR_MAX_INPUT_VALUE', '1e999'))
+    
+    default_encoding: str = field(default_factory=lambda: os.getenv('CALCULATOR_DEFAULT_ENCODING', 'utf-8'))
+
+    log_dir: Path = field(init=False, repr=False)
+    log_file: Path = field(init=False, repr=False)
+    history_dir: Path = field(init=False, repr=False)
+    history_file: Path = field(init=False, repr=False)
+
+    def __post_init__(self):
         """
-        Initialize configuration with environment variables and defaults.
-
-        Args:
-            base_dir (Optional[Path], optional): Base directory for the calculator. Defaults to None.
-            max_history_size (Optional[int], optional): Maximum number of history entries. Defaults to None.
-            auto_save (Optional[bool], optional): Whether to auto-save history. Defaults to None.
-            precision (Optional[int], optional): Number of decimal places for calculations. Defaults to None.
-            max_input_value (Optional[Number], optional): Maximum allowed input value. Defaults to None.
-            default_encoding (Optional[str], optional): Default encoding for file operations. Defaults to None.
+        Post-initialization processing to resolve paths and perform initial validation.
         """
-        # Set base directory to project root by default
-        project_root = get_project_root()
-        self.base_dir = base_dir or Path(
-            os.getenv('CALCULATOR_BASE_DIR', str(project_root))
-        ).resolve()
+        self.log_dir = self.base_dir / self.log_dir_name
+        self.log_file = self.log_dir / self.log_file_name
+        self.history_dir = self.base_dir / self.history_dir_name
+        self.history_file = self.history_dir / self.history_file_name
+        
+        self.validate()
 
-        # Maximum history size
-        self.max_history_size = max_history_size or int(
-            os.getenv('CALCULATOR_MAX_HISTORY_SIZE', '1000')
-        )
-
-        # Auto-save preference
-        auto_save_env = os.getenv('CALCULATOR_AUTO_SAVE', 'true').lower()
-        self.auto_save = auto_save if auto_save is not None else (
-            auto_save_env == 'true' or auto_save_env == '1'
-        )
-
-        # Calculation precision
-        self.precision = precision or int(
-            os.getenv('CALCULATOR_PRECISION', '10')
-        )
-
-        # Maximum input value allowed
-        self.max_input_value = max_input_value or Decimal(
-            os.getenv('CALCULATOR_MAX_INPUT_VALUE', '1e999')
-        )
-
-        # Default encoding for file operations
-        self.default_encoding = default_encoding or os.getenv(
-            'CALCULATOR_DEFAULT_ENCODING', 'utf-8'
-        )
-
-    @property
-    def log_dir(self) -> Path:
+    def validate(self):
         """
-        Get log directory path.
-
-        Determines the directory path where log files will be stored.
-
-        Returns:
-            Path: The log directory path.
+        Validate configuration parameters.
         """
-        return Path(os.getenv(
-            'CALCULATOR_LOG_DIR',
-            str(self.base_dir / "logs")
-        )).resolve()
-
-    @property
-    def history_dir(self) -> Path:
-        """
-        Get history directory path.
-
-        Determines the directory path where calculation history files will be stored.
-
-        Returns:
-            Path: The history directory path.
-        """
-        return Path(os.getenv(
-            'CALCULATOR_HISTORY_DIR',
-            str(self.base_dir / "history")
-        )).resolve()
-
-    @property
-    def history_file(self) -> Path:
-        """
-        Get history file path.
-
-        Determines the file path for storing calculation history in CSV format.
-
-        Returns:
-            Path: The history file path.
-        """
-        return Path(os.getenv(
-            'CALCULATOR_HISTORY_FILE',
-            str(self.history_dir / "calculator_history.csv")
-        )).resolve()
-
-    @property
-    def log_file(self) -> Path:
-        """
-        Get log file path.
-
-        Determines the file path for storing log entries.
-
-        Returns:
-            Path: The log file path.
-        """
-        return Path(os.getenv(
-            'CALCULATOR_LOG_FILE',
-            str(self.log_dir / "calculator.log")
-        )).resolve()
-
-    def validate(self) -> None:
-        """
-        Validate configuration settings.
-
-        Ensures that all configuration parameters meet the required criteria.
-        Raises ConfigurationError if any validation fails.
-
-        Raises:
-            ConfigurationError: If any configuration parameter is invalid.
-        """
-        if self.max_history_size <= 0:
-            raise ConfigurationError("max_history_size must be positive")
-        if self.precision <= 0:
-            raise ConfigurationError("precision must be positive")
+        if not isinstance(self.max_history_size, int) or self.max_history_size <= 0:
+            raise ConfigurationError("max_history_size must be a positive integer.")
+        if not isinstance(self.precision, int) or self.precision < 0:
+            raise ConfigurationError("precision must be a non-negative integer.")
         if self.max_input_value <= 0:
-            raise ConfigurationError("max_input_value must be positive")
+            raise ConfigurationError("max_input_value must be positive.")
+        
+        try:
+            self.log_dir.mkdir(parents=True, exist_ok=True)
+            self.history_dir.mkdir(parents=True, exist_ok=True)
+        except OSError as e: # pragma: no cover
+            raise ConfigurationError(f"Failed to create directory specified in config: {e}") # pragma: no cover

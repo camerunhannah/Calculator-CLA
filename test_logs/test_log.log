@@ -774,23 +774,39 @@
 2025-06-29 12:54:50,192 - INFO - Calculation performed: Addition (2, 3) = 5
 2025-06-29 12:54:50,195 - INFO - History saved successfully to /home/channah/projects/module5_is601/test_history/test_history.csv
 2025-06-29 12:54:50,430 - INFO - History auto-saved
-2025-06-29 12:59:45,207 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
-2025-06-29 12:59:45,213 - INFO - Loaded 35 calculations from history
-2025-06-29 12:59:45,213 - INFO - Calculator initialized with configuration
-2025-06-29 12:59:45,213 - INFO - Added observer: LoggingObserver
-2025-06-29 12:59:45,213 - INFO - Added observer: AutoSaveObserver
-2025-06-29 12:59:45,216 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
-2025-06-29 12:59:45,221 - INFO - Loaded 35 calculations from history
-2025-06-29 12:59:45,221 - INFO - Calculator initialized with configuration
-2025-06-29 12:59:45,221 - INFO - Added observer: LoggingObserver
-2025-06-29 12:59:45,221 - INFO - Added observer: AutoSaveObserver
-2025-06-29 12:59:45,224 - INFO - History saved successfully to /home/channah/projects/CalProject/test_history/test_history.csv
-2025-06-29 12:59:45,226 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
-2025-06-29 12:59:45,231 - INFO - Loaded 35 calculations from history
-2025-06-29 12:59:45,231 - INFO - Calculator initialized with configuration
-2025-06-29 12:59:45,231 - INFO - Added observer: LoggingObserver
-2025-06-29 12:59:45,231 - INFO - Added observer: AutoSaveObserver
-2025-06-29 12:59:45,232 - INFO - Set operation: Addition
-2025-06-29 12:59:45,232 - INFO - Calculation performed: Addition (2, 3) = 5
-2025-06-29 12:59:45,234 - INFO - History saved successfully to /home/channah/projects/CalProject/test_history/test_history.csv
-2025-06-29 12:59:45,439 - INFO - History auto-saved
+2025-06-29 21:46:21,816 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:21,822 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:21,822 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:21,822 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:21,822 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:21,825 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:21,830 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:21,830 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:21,830 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:21,830 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:21,830 - ERROR - Failed to save history: 'Calculation' object has no attribute 'operation'
+2025-06-29 21:46:21,833 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:21,838 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:21,839 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:21,839 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:21,839 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:21,839 - ERROR - Failed to save history: 'Calculation' object has no attribute 'operation'
+2025-06-29 21:46:22,120 - INFO - History auto-saved
+2025-06-29 21:46:46,204 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:46,209 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:46,209 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:46,209 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:46,209 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:46,213 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:46,218 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:46,218 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:46,218 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:46,218 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:46,219 - ERROR - Failed to save history: 'Calculation' object has no attribute 'operation'
+2025-06-29 21:46:46,221 - INFO - Logging initialized at: /home/channah/projects/CalProject/test_logs/test_log.log
+2025-06-29 21:46:46,226 - INFO - Loaded 35 calculations from history
+2025-06-29 21:46:46,226 - INFO - Calculator initialized with configuration
+2025-06-29 21:46:46,226 - INFO - Added observer: LoggingObserver
+2025-06-29 21:46:46,226 - INFO - Added observer: AutoSaveObserver
+2025-06-29 21:46:46,227 - ERROR - Failed to save history: 'Calculation' object has no attribute 'operation'
+2025-06-29 21:46:46,539 - INFO - History auto-saved

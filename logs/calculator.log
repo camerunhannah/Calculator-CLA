@@ -84,21 +84,117 @@
 2025-06-29 12:40:27,354 - INFO - Added observer: LoggingObserver
 2025-06-29 12:40:27,354 - INFO - Added observer: AutoSaveObserver
 2025-06-29 12:40:31,432 - INFO - History saved successfully to /home/channah/projects/module5_is601/history/calculator_history.csv
-2025-06-29 13:33:30,524 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
-2025-06-29 13:33:30,535 - INFO - Loaded 2 calculations from history
-2025-06-29 13:33:30,535 - INFO - Calculator initialized with configuration
-2025-06-29 13:33:30,535 - INFO - Added observer: LoggingObserver
-2025-06-29 13:33:30,535 - INFO - Added observer: AutoSaveObserver
-2025-06-29 13:33:35,507 - INFO - Set operation: Addition
-2025-06-29 13:33:35,508 - INFO - Calculation performed: Addition (1, 1) = 2
-2025-06-29 13:33:35,515 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
-2025-06-29 13:33:35,515 - INFO - History auto-saved
-2025-06-29 13:34:06,703 - INFO - Set operation: Root
-2025-06-29 13:34:06,704 - INFO - Calculation performed: Root (1E+1, 2) = 3.162277660168379522787063251598738133907318115234375
-2025-06-29 13:34:06,705 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
-2025-06-29 13:34:06,705 - INFO - History auto-saved
-2025-06-29 13:34:13,759 - INFO - Set operation: Power
-2025-06-29 13:34:13,760 - INFO - Calculation performed: Power (3, 3) = 27
-2025-06-29 13:34:13,761 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
-2025-06-29 13:34:13,761 - INFO - History auto-saved
-2025-06-29 13:34:23,114 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-29 23:06:44,525 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-29 23:06:44,532 - ERROR - Failed to load history: Unknown operation: Addition
+2025-06-29 23:06:44,532 - WARNING - Could not load existing history: Failed to load history: Unknown operation: Addition
+2025-06-29 23:06:44,532 - INFO - Calculator initialized with configuration
+2025-06-29 23:06:44,532 - INFO - Added observer: LoggingObserver
+2025-06-29 23:06:44,533 - INFO - Added observer: AutoSaveObserver
+2025-06-29 23:11:00,874 - ERROR - Failed to set operation: Unknown operation: Addition
+2025-06-29 23:11:15,462 - ERROR - Failed to set operation: Unknown operation: Addition
+2025-06-29 23:11:24,399 - INFO - Empty history saved
+2025-06-29 23:11:27,956 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-29 23:11:27,958 - INFO - Loaded empty history file
+2025-06-29 23:11:27,958 - INFO - Calculator initialized with configuration
+2025-06-29 23:11:27,958 - INFO - Added observer: LoggingObserver
+2025-06-29 23:11:27,958 - INFO - Added observer: AutoSaveObserver
+2025-06-29 23:11:34,056 - ERROR - Failed to set operation: Unknown operation: Addition
+2025-06-29 23:11:37,516 - INFO - Empty history saved
+2025-06-30 00:26:31,359 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:26:31,416 - INFO - Loaded empty history file
+2025-06-30 00:26:31,416 - INFO - Calculator initialized with configuration
+2025-06-30 00:26:31,416 - INFO - Added observer: LoggingObserver
+2025-06-30 00:26:31,416 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:27:36,538 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:27:36,538 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:29:06,741 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:29:06,741 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:29:23,823 - INFO - Set operation strategy to: PercentageCalculation (command: percent)
+2025-06-30 00:29:23,824 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:30:03,974 - INFO - Set operation strategy to: Modulus (command: modulus)
+2025-06-30 00:30:03,974 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:30:10,691 - INFO - Operation undone. History size: 3
+2025-06-30 00:30:26,309 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:36:56,861 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:36:56,865 - INFO - Loaded 3 calculations from history
+2025-06-30 00:36:56,865 - INFO - Calculator initialized with configuration
+2025-06-30 00:36:56,865 - INFO - Added observer: LoggingObserver
+2025-06-30 00:36:56,866 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:37:12,595 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:37:12,595 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:38:15,650 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:38:36,304 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:38:36,306 - INFO - Loaded 4 calculations from history
+2025-06-30 00:38:36,306 - INFO - Calculator initialized with configuration
+2025-06-30 00:38:36,306 - INFO - Added observer: LoggingObserver
+2025-06-30 00:38:36,307 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:38:50,502 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:38:50,502 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:43:35,066 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:43:50,674 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:43:50,676 - INFO - Loaded 5 calculations from history
+2025-06-30 00:43:50,676 - INFO - Calculator initialized with configuration
+2025-06-30 00:43:50,676 - INFO - Added observer: LoggingObserver
+2025-06-30 00:43:50,676 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:44:01,353 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:44:01,353 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:47:14,489 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:47:26,068 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:47:26,070 - INFO - Loaded 6 calculations from history
+2025-06-30 00:47:26,070 - INFO - Calculator initialized with configuration
+2025-06-30 00:47:26,070 - INFO - Added observer: LoggingObserver
+2025-06-30 00:47:26,070 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:47:43,782 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:47:43,782 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:48:32,601 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:48:45,806 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:48:45,809 - INFO - Loaded 7 calculations from history
+2025-06-30 00:48:45,809 - INFO - Calculator initialized with configuration
+2025-06-30 00:48:45,809 - INFO - Added observer: LoggingObserver
+2025-06-30 00:48:45,809 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:48:49,200 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:48:49,200 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:51:11,264 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:51:25,144 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:51:25,146 - INFO - Loaded 8 calculations from history
+2025-06-30 00:51:25,146 - INFO - Calculator initialized with configuration
+2025-06-30 00:51:25,147 - INFO - Added observer: LoggingObserver
+2025-06-30 00:51:25,147 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:51:38,836 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:51:38,837 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:51:43,150 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:55:10,366 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:55:10,375 - INFO - Loaded 9 calculations from history
+2025-06-30 00:55:10,375 - INFO - Calculator initialized with configuration
+2025-06-30 00:55:10,375 - INFO - Added observer: LoggingObserver
+2025-06-30 00:55:10,375 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:55:20,391 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:55:20,391 - ERROR - An unexpected error occurred during operation: 'Calculation' object has no attribute 'operation'
+2025-06-30 00:58:02,473 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 00:58:02,482 - INFO - Loaded 9 calculations from history
+2025-06-30 00:58:02,482 - INFO - Calculator initialized with configuration
+2025-06-30 00:58:02,482 - INFO - Added observer: LoggingObserver
+2025-06-30 00:58:02,482 - INFO - Added observer: AutoSaveObserver
+2025-06-30 00:58:15,787 - INFO - Set operation strategy to: IntegerDivision (command: int_divide)
+2025-06-30 00:58:15,787 - INFO - Calculation performed: int_divide (1, 1) = 1
+2025-06-30 00:58:15,810 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 00:58:15,810 - INFO - History auto-saved
+2025-06-30 01:00:56,333 - INFO - Set operation strategy to: PercentageCalculation (command: percent)
+2025-06-30 01:00:56,334 - INFO - Calculation performed: percent (5E+2, 1E+1) = 5.00E+3
+2025-06-30 01:00:56,335 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 01:00:56,335 - INFO - History auto-saved
+2025-06-30 01:01:03,212 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:30:14,657 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 02:30:14,664 - INFO - Loaded 11 calculations from history
+2025-06-30 02:30:14,664 - INFO - Calculator initialized with configuration
+2025-06-30 02:30:14,664 - INFO - Added observer: LoggingObserver
+2025-06-30 02:30:14,664 - INFO - Added observer: AutoSaveObserver
+2025-06-30 02:30:24,718 - INFO - Set operation strategy to: PercentageCalculation (command: percent)
+2025-06-30 02:30:24,718 - INFO - Calculation performed: percent (4E+3, 4E+1) = 1.00E+4
+2025-06-30 02:30:24,743 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:30:24,743 - INFO - History auto-saved
+2025-06-30 02:30:51,716 - INFO - Set operation strategy to: PercentageCalculation (command: percent)
+2025-06-30 02:30:51,716 - INFO - Calculation performed: percent (1E+1, 1E+3) = 1.00
+2025-06-30 02:30:51,717 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:30:51,717 - INFO - History auto-saved
+2025-06-30 02:30:57,190 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
