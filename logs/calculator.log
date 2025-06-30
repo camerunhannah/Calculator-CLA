@@ -198,3 +198,37 @@
 2025-06-30 02:30:51,717 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
 2025-06-30 02:30:51,717 - INFO - History auto-saved
 2025-06-30 02:30:57,190 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:39:26,975 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 02:39:26,978 - INFO - Loaded 13 calculations from history
+2025-06-30 02:39:26,978 - INFO - Calculator initialized with configuration
+2025-06-30 02:39:26,978 - INFO - Added observer: LoggingObserver
+2025-06-30 02:39:26,978 - INFO - Added observer: AutoSaveObserver
+2025-06-30 02:39:33,631 - INFO - Set operation strategy to: Addition (command: add)
+2025-06-30 02:39:33,631 - INFO - Calculation performed: add (2, 2) = 4
+2025-06-30 02:39:33,632 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:39:33,632 - INFO - History auto-saved
+2025-06-30 02:39:33,632 - ERROR - Unexpected error during command 'add': 'AnsiFore' object has no attribute 'BRIGHT_GREEN'
+Traceback (most recent call last):
+  File "/home/channah/projects/CalProject/app/calculator_repl.py", line 149, in calculator_repl
+    print(Fore.BRIGHT_GREEN + f"\nResult: {formatted_result}" + Style.RESET_ALL)
+          ^^^^^^^^^^^^^^^^^
+AttributeError: 'AnsiFore' object has no attribute 'BRIGHT_GREEN'
+2025-06-30 02:41:06,931 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:42:30,020 - INFO - Logging initialized at: /home/channah/projects/CalProject/logs/calculator.log
+2025-06-30 02:42:30,022 - INFO - Loaded 14 calculations from history
+2025-06-30 02:42:30,023 - INFO - Calculator initialized with configuration
+2025-06-30 02:42:30,023 - INFO - Added observer: LoggingObserver
+2025-06-30 02:42:30,023 - INFO - Added observer: AutoSaveObserver
+2025-06-30 02:42:34,257 - INFO - Set operation strategy to: Addition (command: add)
+2025-06-30 02:42:34,257 - INFO - Calculation performed: add (1, 1) = 2
+2025-06-30 02:42:34,259 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:42:34,259 - INFO - History auto-saved
+2025-06-30 02:43:14,588 - INFO - Set operation strategy to: Subtraction (command: subtract)
+2025-06-30 02:43:14,588 - INFO - Calculation performed: subtract (4, 2) = 2
+2025-06-30 02:43:14,589 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:43:14,589 - INFO - History auto-saved
+2025-06-30 02:43:37,083 - INFO - Set operation strategy to: PercentageCalculation (command: percent)
+2025-06-30 02:43:37,083 - INFO - Calculation performed: percent (1E+2, 5) = 2.00E+3
+2025-06-30 02:43:37,084 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
+2025-06-30 02:43:37,084 - INFO - History auto-saved
+2025-06-30 02:43:41,237 - INFO - History saved successfully to /home/channah/projects/CalProject/history/calculator_history.csv
