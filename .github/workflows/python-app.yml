@@ -1,6 +1,4 @@
-# .github/workflows/python-app.yml
-
-name: Python Application CI
+name: Run Tests on Push or Pull Request to Main
 
 on:
   push:
@@ -11,44 +9,24 @@ on:
       - master  # Run tests on any pull request to the main branch
 
 jobs:
-  build:
-    runs-on: ubuntu-latest # Use a standard Linux environment
+  test:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Check out repository code
-        uses: actions/checkout@v4 # Use a recent version for security and features
+      - name: Check out the code
+        uses: actions/checkout@v3
 
-      - name: Set up Python 3.12.3
-        uses: actions/setup-python@v5 # Use a recent version
+      - name: Set up Python
+        uses: actions/setup-python@v4
         with:
-          python-version: '3.12.3' # Specify your exact Python version
+          python-version: '3.x'  # Set your desired Python version
 
-      - name: Install dependencies
+      - name: Install dependencies from requirements.txt
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          # Ensure pytest and pytest-cov are installed, even if not explicitly in requirements.txt
-          # (though it's best practice to have them there)
-          pip install pytest pytest-cov
-
-      - name: Set up .env variables for testing
-        # This step creates a .env file on the GitHub Actions runner
-        # with the configuration variables your application needs.
-        # IMPORTANT: For sensitive values, use GitHub Secrets!
-        # For this project's config, these are likely non-sensitive defaults.
-        run: |
-          echo "CALCULATOR_MAX_HISTORY_SIZE=100" >> .env
-          echo "CALCULATOR_AUTO_SAVE=true" >> .env
-          echo "CALCULATOR_PRECISION=10" >> .env
-          echo "CALCULATOR_MAX_INPUT_VALUE=1000000000000000000" >> .env # Example: 1e18
-          echo "CALCULATOR_DEFAULT_ENCODING=utf-8" >> .env
-          # Set base_dir to the GitHub workspace root for consistent pathing in CI
-          echo "CALCULATOR_BASE_DIR=${{ github.workspace }}" >> .env
-          echo "CALCULATOR_LOG_DIR=logs" >> .env
-          echo "CALCULATOR_HISTORY_DIR=history" >> .env
-          echo "CALCULATOR_LOG_FILE=calculator.log" >> .env
-          echo "CALCULATOR_HISTORY_FILE=calculator_history.csv" >> .env
+          pip install pytest pytest-cov  # Ensure pytest-cov is installed
 
       - name: Run tests with pytest and enforce 90% coverage
         run: |
-          pytest --cov=app --cov-fail-under=90 --log-cli-level=INFO
+          pytest --cov=app --cov-fail-under=90
