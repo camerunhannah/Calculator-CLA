@@ -1,565 +1,362 @@
-# tests/test_calculator_repl.py (Full Code - Final Version)
+# tests/test_calculator.py 
 
-import pytest
-import sys
-import logging
-from unittest.mock import MagicMock, patch, PropertyMock
-from decimal import Decimal
+import datetime
 from pathlib import Path
+import pandas as pd
+import pytest
+from unittest.mock import Mock, patch, PropertyMock
+from decimal import Decimal
+from tempfile import TemporaryDirectory
+import logging
 
-# Import the actual classes we are testing or mocking their dependencies
-from app.calculator_repl import calculator_repl
+from app.calculation import Calculation
 from app.calculator import Calculator
 from app.calculator_config import CalculatorConfig
 from app.exceptions import OperationError, ValidationError
-from app.history import AutoSaveObserver, LoggingObserver # Import observers for mocking purposes
-from app.operations import OperationFactory
+from app.history import LoggingObserver, AutoSaveObserver
+from app.operations import OperationFactory, Addition, Subtraction # Import specific operation classes for type checking
 
-# Fixtures for common mocks 
 
+# Fixture to initialize Calculator with a temporary directory for file paths
 @pytest.fixture
-def mock_calculator(mocker):
-    """
-    Mocks the Calculator class and its instance methods, ensuring required attributes exist.
-    Returns a mocked Calculator instance.
-    """
-    mock_calc_instance = mocker.MagicMock(spec=Calculator)
-    
-    # Ensure 'config' attribute exists on the mock and is itself a mock of CalculatorConfig
-    mock_calc_instance.config = mocker.MagicMock(spec=CalculatorConfig)
-    # Set necessary config attributes that observers or calculator_repl might access
-    mock_calc_instance.config.auto_save = True # Default for observers in repl tests
-    mock_calc_instance.config.precision = 10 # Default for formatting
-    mock_calc_instance.config.history_file = MagicMock(spec=Path) # Mock Path objects
-    mock_calc_instance.config.history_file.exists.return_value = True # For load_history checks
-    mock_calc_instance.config.max_history_size = 5 # For max history check
-    mock_calc_instance.config.default_encoding = "utf-8" # For encoding
-    mock_calc_instance.config.log_dir = MagicMock(spec=Path) # For logging setup
-    mock_calc_instance.config.log_file = MagicMock(spec=Path) # For logging setup
-    mock_calc_instance.config.log_file.resolve.return_value = Path("/tmp/mock_log.log") # Mock resolve()
-    mock_calc_instance.config.max_input_value = Decimal('1000000') # Needed by InputValidator
+def calculator(mocker): # ADDED 'mocker' fixture here
+    with TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        # Create a mock config object instead of a real one, to control attributes directly
+        mock_config = mocker.Mock(spec=CalculatorConfig) # Use mocker.Mock
+        
+        # Set all required config attributes on the mock object
+        mock_config.base_dir = temp_path
+        mock_config.log_dir = temp_path / "logs"
+        mock_config.log_file = temp_path / "logs/calculator.log"
+        mock_config.history_dir = temp_path / "history"
+        mock_config.history_file = temp_path / "history/calculator_history.csv"
+        mock_config.max_history_size = 5 # Set a small max history size for testing
+        mock_config.default_encoding = "utf-8" # Default encoding
+        mock_config.max_input_value = Decimal('1000000') # Default max input value
+        # Mock the validate method to do nothing, as we're controlling config attributes directly
+        mock_config.validate.return_value = None 
+
+        # Ensure logging handlers are cleared before Calculator init in tests
+        # This is critical for tests that instantiate Calculator multiple times.
+        for handler in logging.getLogger().handlers[:]:
+            logging.getLogger().removeHandler(handler)
+        logging.getLogger().propagate = True # Reset propagation to default
+
+        yield Calculator(config=mock_config) # Pass the mock config to Calculator
+
+# Test Calculator Initialization
+
+def test_calculator_initialization(calculator):
+    assert calculator.history == []
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+    assert calculator.operation_strategy is None
+    assert calculator.last_command_name is None # Assert new attribute is None initially
+    # Ensure directories are created by checking if they exist in the mocked paths
+    assert calculator.config.log_dir.exists()
+    assert calculator.config.history_dir.exists()
 
 
-    # Ensure methods that calculator_repl interacts with are mocked
-    mock_calc_instance.save_history = mocker.MagicMock()
-    mock_calc_instance.load_history = mocker.MagicMock() 
-    mock_calc_instance.show_history.return_value = []
-    mock_calc_instance.clear_history = mocker.MagicMock() # Ensure clear_history is mocked
-    mock_calc_instance.undo.return_value = False
-    mock_calc_instance.redo.return_value = False
-    mock_calc_instance.perform_operation.return_value = Decimal('0') 
-    mock_calc_instance.set_operation = mocker.MagicMock() # Ensure set_operation is mocked
-    mock_calc_instance.history = [] # Provide a mutable history list for REPL to append to
+# Test Logging Setup
+@patch('app.calculator.logging.info')
+@patch('app.calculator.os.makedirs') # Mock makedirs in app.calculator
+@patch('app.calculator.logging.basicConfig') # Mock basicConfig itself
+def test_logging_setup(mock_basicConfig, mock_makedirs, logging_info_mock, mocker): # ADDED 'mocker' here
+    with TemporaryDirectory() as temp_dir:
+        temp_path = Path(temp_dir)
+        # Create a mock config object to pass to Calculator
+        mock_config = mocker.Mock(spec=CalculatorConfig) # Use mocker.Mock
+        mock_config.log_dir = temp_path / "logs_test"
+        mock_config.log_file = temp_path / "logs_test" / "test.log"
+        # Ensure all required attributes for Calculator's __init__ are present on the mock config
+        mock_config.history_dir = temp_path / "history_test" 
+        mock_config.history_file = mock_config.history_dir / "history.csv"
+        mock_config.max_history_size = 5
+        mock_config.default_encoding = "utf-8"
+        mock_config.max_input_value = Decimal('1000000')
+        mock_config.validate.return_value = None # Mock validate to do nothing
+        
+        # Ensure the test target directory for logging is created
+        mock_makedirs.return_value = None # os.makedirs should be called
 
-    # Patch the Calculator constructor itself to return our mock instance
-    mocker.patch('app.calculator_repl.Calculator', return_value=mock_calc_instance)
-    # Patch CalculatorConfig within calculator_repl to ensure it returns a mock too
-    mocker.patch('app.calculator_repl.CalculatorConfig', return_value=mock_calc_instance.config)
-    # Patch the observers' __init__ methods since they are created inside calculator_repl
-    mocker.patch('app.calculator_repl.LoggingObserver', return_value=mocker.MagicMock(spec=LoggingObserver))
-    mocker.patch('app.calculator_repl.AutoSaveObserver', return_value=mocker.MagicMock(spec=AutoSaveObserver))
+        # Ensure logging handlers are cleared before Calculator init to prevent conflicts
+        for handler in logging.getLogger().handlers[:]:
+            logging.getLogger().removeHandler(handler)
+        logging.getLogger().propagate = True # Reset propagation
 
-    return mock_calc_instance
+        # Instantiate calculator to trigger logging setup within __init__
+        calculator = Calculator(mock_config)
 
-@pytest.fixture
-def mock_input(mocker):
-    """
-    Mocks builtins.input to control user input during tests.
-    """
-    return mocker.patch('builtins.input')
-
-@pytest.fixture
-def mock_sys_exit(mocker):
-    """
-    Mocks sys.exit to prevent tests from actually exiting the interpreter.
-    """
-    return mocker.patch('sys.exit')
-
-@pytest.fixture
-def mock_logging_error(mocker):
-    """
-    Mocks logging.error to capture error logs.
-    """
-    return mocker.patch('logging.error')
-
-@pytest.fixture
-def mock_operation_factory(mocker):
-    """
-    Mocks OperationFactory.create_operation to control operation instance creation.
-    """
-    mock_op_instance = mocker.MagicMock()
-    mock_op_instance.execute.return_value = Decimal('100') # Default operation execution result
-    # For __str__ on the mocked operation instance (used by Calculation.__str__ for history)
-    mock_op_instance.__str__.return_value = "MockOperation" 
-    # Patch OperationFactory.create_operation in the scope of calculator_repl
-    mocker.patch('app.calculator_repl.OperationFactory.create_operation', return_value=mock_op_instance)
-    return mock_op_instance # Return the mock_op_instance itself for more granular assertions if needed
-
-# Tests for calculator_repl function 
-
-def test_repl_welcome_message(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests that the REPL displays the correct welcome message and exits cleanly.
-    Covers welcome message and basic exit path.
-    """
-    mock_input.side_effect = ['exit'] # Simulate user typing 'exit'
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Calculator started. Type 'help' for commands." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called() 
-
-def test_repl_empty_input(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests that empty user input causes the REPL to continue without error.
-    Covers the 'if not user_input: continue' path and subsequent 'Unknown command' if it falls through.
-    """
-    mock_input.side_effect = ['', 'exit'] # Simulate empty input, then exit
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "No command entered. Type 'help' for available commands." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_help_command(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'help' command displays the help message.
-    Covers the 'if command == "help"' path.
-    """
-    mock_input.side_effect = ['help', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Available commands:" in captured.out
-    # Updated help message for new operations
-    assert "add, subtract, multiply, divide, power, root, modulus, int_divide, percent, abs_diff - Perform calculations" in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_exit_command_save_history_success(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests that the 'exit' command attempts to save history and exits.
-    Covers the successful save history path before exit.
-    """
-    mock_input.side_effect = ['exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    # The REPL calls save_history when 'exit' is typed (in this specific path)
-    mock_calculator.save_history.assert_called_once() 
-    assert "History saved successfully." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_exit_command_save_history_failure(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests that the 'exit' command handles save history failure gracefully.
-    """
-    mock_input.side_effect = ['exit']
-    # Ensure the side_effect is an OperationError to match REPL's specific catch
-    mock_calculator.save_history.side_effect = OperationError("Disk full!") 
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.save_history.assert_called_once()
-    assert "Warning: Could not save history: Disk full!" in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_history_command_empty(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'history' command when no calculations have been performed.
-    """
-    mock_input.side_effect = ['history', 'exit']
-    mock_calculator.show_history.return_value = [] # Ensure history is empty
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "No calculations in history." in captured.out
-    mock_calculator.show_history.assert_called_once()
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_history_command_with_items(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'history' command when calculations exist.
-    """
-    # Mock some history entries 
-    mock_calc_entry1 = MagicMock()
-    mock_calc_entry1.__str__.return_value = "Addition(2, 3) = 5"
-    mock_calc_entry2 = MagicMock()
-    mock_calc_entry2.__str__.return_value = "Subtraction(10, 2) = 8"
-    mock_calculator.show_history.return_value = [mock_calc_entry1, mock_calc_entry2]
-    
-    mock_input.side_effect = ['history', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Calculation History:" in captured.out
-    assert "1. Addition(2, 3) = 5" in captured.out
-    assert "2. Subtraction(10, 2) = 8" in captured.out
-    mock_calculator.show_history.assert_called_once()
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_clear_command(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'clear' command.
-    """
-    mock_input.side_effect = ['clear', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.clear_history.assert_called_once()
-    assert "History cleared." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_undo_command_success(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'undo' command when an operation can be undone.
-    """
-    mock_input.side_effect = ['undo', 'exit']
-    mock_calculator.undo.return_value = True # Simulate successful undo
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.undo.assert_called_once()
-    assert "Operation undone." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_undo_command_nothing_to_undo(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'undo' command when there's nothing to undo.
-    """
-    mock_input.side_effect = ['undo', 'exit']
-    mock_calculator.undo.return_value = False # Simulate nothing to undo
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.undo.assert_called_once()
-    assert "Nothing to undo." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_redo_command_success(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'redo' command when an operation can be redone.
-    """
-    mock_input.side_effect = ['redo', 'exit']
-    mock_calculator.redo.return_value = True # Simulate successful redo
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.redo.assert_called_once()
-    assert "Operation redone." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_redo_command_nothing_to_redo(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'redo' command when there's nothing to redo.
-    """
-    mock_input.side_effect = ['redo', 'exit']
-    mock_calculator.redo.return_value = False # Simulate nothing to redo
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Nothing to redo." in captured.out
-    mock_calculator.redo.assert_called_once()
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_save_command_success(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'save' command on successful history save.
-    """
-    mock_input.side_effect = ['save', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    # The REPL calls save_history when 'save' is typed, and again on 'exit'
-    mock_calculator.save_history.assert_called() 
-    assert mock_calculator.save_history.call_count == 2 
-    assert "History saved successfully." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_save_command_failure(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests that the 'save' command handles save history failure gracefully.
-    """
-    mock_input.side_effect = ['save', 'exit']
-    # Ensure the side_effect is an OperationError to match REPL's specific catch
-    mock_calculator.save_history.side_effect = OperationError("Save error mock!")
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.save_history.assert_called()
-    assert mock_calculator.save_history.call_count == 2
-    assert "Error saving history: Save error mock!" in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_load_command_success(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'load' command on successful history load.
-    """
-    mock_input.side_effect = ['load', 'exit']
-    # Mock load_history to return None or empty history for simplicity
-    mock_calculator.load_history.return_value = None
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.load_history.assert_called_once()
-    assert "History loaded successfully." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_load_command_failure(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests the 'load' command when history load fails.
-    """
-    mock_input.side_effect = ['load', 'exit']
-    # Ensure the side_effect is an OperationError to match REPL's specific catch
-    mock_calculator.load_history.side_effect = OperationError("Load error mock!")
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    mock_calculator.load_history.assert_called_once()
-    assert "Error loading history: Load error mock!" in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-@pytest.mark.parametrize("cmd, num1, num2, expected_decimal_val", [ 
-    ('add', '10', '5', Decimal('15')),
-    ('subtract', '10', '5', Decimal('5')),
-    ('multiply', '10', '5', Decimal('50')), # Adjusted to 50 for consistent string output
-    ('divide', '10', '5', Decimal('2')),
-    ('power', '2', '3', Decimal('8')),
-    ('root', '9', '2', Decimal('3')),
-    ('modulus', '10', '3', Decimal('1')),
-    ('int_divide', '10', '3', Decimal('3')),
-    ('percent', '50', '200', Decimal('25')),
-    ('abs_diff', '5', '10', Decimal('5')),
-])
-def test_repl_arithmetic_commands_success(capsys, mock_input, mock_sys_exit, mock_calculator, mock_operation_factory, cmd, num1, num2, expected_decimal_val):
-    """
-    Tests successful arithmetic operations.
-    """
-    mock_input.side_effect = [cmd, num1, num2, 'exit']
-    mock_calculator.perform_operation.return_value = expected_decimal_val
-    # Mock the last element of history and its format_result for the REPL output check
-    mock_calculation_in_history = MagicMock()
-    # The REPL calls format_result on calc.history[-1]
-    mock_calculation_in_history.format_result.return_value = str(expected_decimal_val.normalize())
-    mock_calculator.history = [mock_calculation_in_history] # Ensure history is populated with one item for REPL to access
-    # mock_calculator.config is already mocked in the fixture to have precision
-    # mock_calculator.config.precision is already set in mock_calculator fixture, no need to set here
-
-    calculator_repl()
-
-    captured = capsys.readouterr()
-    expected_output_str = f"Result: {str(expected_decimal_val.normalize())}"
-    assert expected_output_str in captured.out
-    
-    # set_operation receives the command string (e.g., 'add')
-    mock_calculator.set_operation.assert_called_once_with(cmd) 
-    # perform_operation receives the number strings from input
-    mock_calculator.perform_operation.assert_called_once_with(num1, num2)
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
+        mock_makedirs.assert_called_once_with(mock_config.log_dir, exist_ok=True)
+        mock_basicConfig.assert_called_once_with(
+            filename=str(mock_config.log_file),
+            level=logging.INFO,
+            format='%(asctime)s - %(levelname)s - %(message)s',
+            force=True
+        )
+        logging_info_mock.assert_any_call(f"Logging initialized at: {mock_config.log_file}")
+        logging_info_mock.assert_any_call("Calculator initialized with configuration")
 
 
-def test_repl_calc_command_cancel_first_number(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests canceling input for the first number.
-    """
-    mock_input.side_effect = ['add', 'cancel', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Operation cancelled." in captured.out # Expect "Operation cancelled." now
-    mock_calculator.set_operation.assert_not_called() # Should not try to set operation
-    mock_calculator.perform_operation.assert_not_called()
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
+# Test Adding and Removing Observers
 
-@pytest.mark.skip(reason="Known issue with mock_calculator.set_operation not registering call in this specific test environment.")
-def test_repl_calc_command_cancel_second_number(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests canceling input for the second number, ensuring set_operation is called.
-    Temporarily skipped due to persistent, isolated mocking challenge.
-    """
-    # Simulate: command 'add', first number '10', second number 'cancel', then 'exit'
-    mock_input.side_effect = ['add', '10', 'cancel', 'exit']
+def test_add_observer(calculator, mocker): # ADDED 'mocker' here
+    observer = LoggingObserver()
+    calculator.add_observer(observer)
+    assert observer in calculator.observers
+    # Test adding duplicate observer - should not add again
+    calculator.add_observer(observer)
+    assert calculator.observers.count(observer) == 1
 
-    # Ensure the mock's call count is clean before running the REPL
-    mock_calculator.set_operation.reset_mock() 
-
-    calculator_repl()
-
-    captured = capsys.readouterr()
-
-    
-
-    # Assert the cancellation message appears
-    assert "Operation cancelled." in captured.out 
-
-    # Assert perform_operation was NOT called because of cancellation
-    mock_calculator.perform_operation.assert_not_called()
-
-    # Assert normal exit
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_calc_command_validation_error(capsys, mock_input, mock_sys_exit, mock_calculator, mock_operation_factory):
-    """
-    Tests handling of ValidationError during calculation.
-    """
-    mock_input.side_effect = ['add', 'invalid', '5', 'exit'] # Provide invalid input directly
-    # Mock set_operation to allow it to be called
-    mock_calculator.set_operation.return_value = None 
-    mock_calculator.perform_operation.side_effect = ValidationError("Invalid number format.") 
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr() 
-    
-    # CORRECTED ASSERTIONS:
-    mock_calculator.set_operation.assert_called_once_with('add') # Should be called with string 'add'
-    mock_calculator.perform_operation.assert_called_once_with('invalid', '5')
-    assert "Error: Invalid number format." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_calc_command_operation_error(capsys, mock_input, mock_sys_exit, mock_calculator, mock_operation_factory):
-    """
-    Tests handling of OperationError during calculation (e.g., specific domain errors).
-    """
-    mock_input.side_effect = ['divide', '10', '0', 'exit'] # Provide input that would cause division by zero
-    mock_calculator.set_operation.return_value = None
-    mock_calculator.perform_operation.side_effect = OperationError("Custom operation error.")
-    
-    calculator_repl()
-    captured = capsys.readouterr() # Define captured after calculator_repl()
-    
-    mock_calculator.set_operation.assert_called_once_with('divide') # Should be called with string 'divide'
-    mock_calculator.perform_operation.assert_called_once_with('10', '0')
-    assert "Error: Custom operation error." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_calc_command_unexpected_exception(capsys, mock_input, mock_sys_exit, mock_calculator, mock_operation_factory):
-    """
-    Tests handling of any unexpected Exception during calculation.
-    """
-    mock_input.side_effect = ['add', '10', '5', 'exit'] # Provide valid input
-    mock_calculator.set_operation.return_value = None
-    mock_calculator.perform_operation.side_effect = Exception("Unexpected calculation issue!") 
-    
-    calculator_repl()
-    captured = capsys.readouterr() # Define captured after calculator_repl()
-    
-    mock_calculator.set_operation.assert_called_once_with('add') # Should be called with string 'add'
-    mock_calculator.perform_operation.assert_called_once_with('10', '5')
-    # Corrected assertion to match what the REPL's innermost 'except Exception' handler prints
-    assert "Unexpected error: Unexpected calculation issue!" in captured.out 
-    # The outer message "An unhandled error occurred..." will not appear in this specific test's captured.out
-    # because the inner block will catch and print, then continue.
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_unknown_command(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests handling of unknown commands.
-    """
-    mock_input.side_effect = ['unknown_command', 'exit']
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Unknown command: 'unknown_command'. Type 'help' for available commands." in captured.out
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
-
-def test_repl_keyboard_interrupt_graceful_exit(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests handling of KeyboardInterrupt (Ctrl+C) during input.
-    """
-    mock_input.side_effect = [KeyboardInterrupt, 'exit'] 
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Operation cancelled. Type 'exit' to quit the calculator." in captured.out
-    mock_sys_exit.assert_not_called()
+def test_remove_observer(calculator, mocker): # ADDED 'mocker' here
+    observer = LoggingObserver()
+    calculator.add_observer(observer)
+    calculator.remove_observer(observer)
+    assert observer not in calculator.observers
+    # Test removing non-existent observer (should be handled gracefully)
+    with patch('app.calculator.logging.warning') as mock_log_warning:
+        calculator.remove_observer(observer)
+        mock_log_warning.assert_called_once_with(f"Observer {observer.__class__.__name__} not found, cannot remove.")
 
 
-def test_repl_eof_graceful_exit(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests handling of EOFError (Ctrl+D) during input.
-    """
-    mock_input.side_effect = [EOFError, 'exit'] 
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "Input terminated. Exiting..." in captured.out
-    # The REPL code attempts to save history on EOFError, so assert that mock call too
-    mock_calculator.save_history.assert_called_once()
-    assert "Goodbye!" in captured.out
-    mock_sys_exit.assert_not_called()
+# Test Setting Operations
 
-def test_repl_unexpected_exception_in_main_loop(capsys, mock_input, mock_sys_exit, mock_calculator):
-    """
-    Tests handling of any unexpected Exception in the main REPL loop.
-    """
-    # Simulate an input that is valid, but the processing causes an error
-    mock_input.side_effect = ["history", "exit"] # Input 'history' to trigger mock_calculator.show_history
-    mock_calculator.show_history.side_effect = Exception("Loop error mock!")
-    
-    calculator_repl()
-    
-    captured = capsys.readouterr()
-    assert "An unhandled error occurred: Loop error mock!" in captured.out
-    assert "Exiting due to unhandled error." in captured.out
-    mock_calculator.show_history.assert_called_once()
-    mock_sys_exit.assert_not_called() # REPL breaks the loop, doesn't sys.exit
+def test_set_operation(calculator):
+    # Pass the operation name (string)
+    calculator.set_operation('add')
+    # Assert that the operation_strategy is an instance of the correct concrete class
+    assert isinstance(calculator.operation_strategy, Addition)
+    assert calculator.last_command_name == 'add' # Verify stored command name
 
-def test_repl_fatal_initialization_error(capsys, mock_input, mock_sys_exit, mock_logging_error, mocker):
-    """
-    Tests handling of a fatal error during Calculator initialization.
-    This test patches Calculator's constructor to raise an exception.
-    """
-    # Patch the Calculator constructor to raise an exception when called
-    mocker.patch('app.calculator_repl.Calculator', side_effect=Exception("Initialization failed!"))
-    # Patch CalculatorConfig as well, as it's initialized before Calculator
-    mocker.patch('app.calculator_repl.CalculatorConfig', return_value=mocker.MagicMock(spec=CalculatorConfig))
+def test_set_operation_unknown(calculator):
+    with pytest.raises(OperationError, match="Unknown operation: invalid_op"):
+        calculator.set_operation('invalid_op')
+    assert calculator.operation_strategy is None # Ensure strategy remains None
+    assert calculator.last_command_name is None # Ensure command name remains None
+
+
+# Test Performing Operations
+
+def test_perform_operation_addition(calculator):
+    calculator.set_operation('add')
+    result = calculator.perform_operation(2, 3)
+    assert result == Decimal('5')
+    assert len(calculator.history) == 1
+    # Check the operation_name in the stored Calculation object (this is the short name)
+    assert calculator.history[0].operation_name == "add" 
+    assert calculator.history[0].operand1 == Decimal('2')
+    assert calculator.history[0].operand2 == Decimal('3')
+    assert calculator.history[0].result == Decimal('5')
+    # Check undo stack after operation
+    assert len(calculator.undo_stack) == 1
+    assert calculator.redo_stack == []
+
+def test_perform_operation_subtraction(calculator):
+    calculator.set_operation('subtract')
+    result = calculator.perform_operation(10, 4)
+    assert result == Decimal('6')
+    assert calculator.history[0].operation_name == "subtract"
+
+def test_perform_operation_modulus(calculator):
+    calculator.set_operation('modulus')
+    result = calculator.perform_operation(10, 3)
+    assert result == Decimal('1')
+    assert calculator.history[0].operation_name == "modulus"
+
+def test_perform_operation_int_divide(calculator):
+    calculator.set_operation('int_divide')
+    result = calculator.perform_operation(10, 3)
+    assert result == Decimal('3')
+    assert calculator.history[0].operation_name == "int_divide"
+
+def test_perform_operation_percent(calculator):
+    calculator.set_operation('percent')
+    result = calculator.perform_operation(50, 200)
+    assert result == Decimal('25')
+    assert calculator.history[0].operation_name == "percent"
+
+def test_perform_operation_abs_diff(calculator):
+    calculator.set_operation('abs_diff')
+    result = calculator.perform_operation(5, 10)
+    assert result == Decimal('5')
+    assert calculator.history[0].operation_name == "abs_diff"
+
+
+def test_perform_operation_validation_error(calculator):
+    calculator.set_operation('add') 
+    with pytest.raises(ValidationError):
+        calculator.perform_operation('invalid', 3)
+
+def test_perform_operation_no_operation_set(calculator):
+    with pytest.raises(OperationError, match="No operation set"):
+        calculator.perform_operation(2, 3)
+
+def test_perform_operation_operation_specific_error(calculator):
+    calculator.set_operation('divide')
+    with pytest.raises(OperationError, match="Division by zero is not allowed"):
+        calculator.perform_operation(10, 0)
+
+# Test Undo/Redo Functionality
+
+def test_undo_successful(calculator):
+    calculator.set_operation('add')
+    calculator.perform_operation(2, 3) 
+    assert len(calculator.history) == 1
+    assert len(calculator.undo_stack) == 1
+    assert len(calculator.redo_stack) == 0
+
+    assert calculator.undo() is True 
+    assert calculator.history == [] # History is empty after undoing the only operation
+    assert len(calculator.undo_stack) == 0
+    assert len(calculator.redo_stack) == 1 # Redo stack now has the memento of [Calc1]
+
+def test_undo_nothing_to_undo(calculator):
+    assert calculator.undo() is False
+    assert calculator.history == []
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+
+def test_redo_successful(calculator):
+    calculator.set_operation('add')
+    calculator.perform_operation(2, 3) 
+    calculator.undo()                  
+    assert calculator.redo() is True   
+    assert len(calculator.history) == 1
+    assert len(calculator.undo_stack) == 1 # Should contain the memento of [] (state before redo)
+    assert len(calculator.redo_stack) == 0
+    assert calculator.history[0].operation_name == "add" # Assert short name
+    assert calculator.history[0].result == Decimal('5')
+
+
+def test_redo_nothing_to_redo(calculator):
+    assert calculator.redo() is False
+    assert calculator.history == []
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+
+def test_new_operation_clears_redo_stack(calculator):
+    calculator.set_operation('add')
+    calculator.perform_operation(1, 1) 
+    calculator.perform_operation(2, 2) 
+    calculator.undo()                  
     
-    calculator_repl()
+    # Perform a new operation, this should clear the redo stack
+    calculator.set_operation('multiply')
+    calculator.perform_operation(3, 3) 
     
-    captured = capsys.readouterr()
-    assert "Fatal error: Initialization failed!. Exiting." in captured.out
-    mock_logging_error.assert_called_once_with("Fatal error in calculator REPL during initialization: Initialization failed!", exc_info=True)
-    mock_sys_exit.assert_called_once_with(1) # Assert sys.exit(1) is called on fatal error
+    assert len(calculator.history) == 2
+    assert calculator.redo_stack == [] 
+
+def test_history_max_size_enforcement(calculator):
+    # Max history size is mocked to 5 in the fixture
+    calculator.set_operation('add')
+    for i in range(1, 10): # Add 9 operations
+        calculator.perform_operation(i, 1)
+    
+    assert len(calculator.history) == 5 # Should only keep the last 5
+    assert calculator.history[0].operand1 == Decimal('5') # First element should be 5+1=6 (original 5th calc)
+    assert calculator.history[-1].operand1 == Decimal('9') # Last element should be 9+1=10 (original 9th calc)
+
+# Test History Management
+
+@patch('app.calculator.pd.DataFrame.to_csv')
+@patch('app.calculator.pd.DataFrame', autospec=True) # Patch DataFrame constructor for inspection
+def test_save_history_success(mock_dataframe_constructor, mock_to_csv, calculator):
+    # Reset mock_dataframe_constructor calls if it's reused from previous tests
+    mock_dataframe_constructor.reset_mock()
+    mock_to_csv.reset_mock()
+
+    calculator.set_operation('add')
+    calculator.perform_operation(2, 3)
+    calculator.save_history()
+
+    # Check that DataFrame was created with the correct data
+    mock_dataframe_constructor.assert_called_once()
+    args, kwargs = mock_dataframe_constructor.call_args
+    history_data = args[0] # The first argument should be the list of dicts
+
+    assert isinstance(history_data, list)
+    assert len(history_data) == 1
+    assert history_data[0]['operation'] == "add" # Now expects short name
+    assert history_data[0]['operand1'] == "2"
+    assert history_data[0]['result'] == "5"
+
+    # Check that to_csv was called on the mock DataFrame instance returned by the constructor
+    mock_dataframe_constructor.return_value.to_csv.assert_called_once_with(
+        calculator.config.history_file, 
+        index=False, 
+        encoding=calculator.config.default_encoding
+    )
+
+@patch('app.calculator.pd.DataFrame.to_csv', side_effect=Exception("Save error!"))
+def test_save_history_failure(mock_to_csv, calculator):
+    calculator.set_operation('add')
+    calculator.perform_operation(2, 3)
+    with pytest.raises(OperationError, match="Failed to save history: Save error!"):
+        calculator.save_history()
+    mock_to_csv.assert_called_once()
+
+@patch('app.calculator.pd.read_csv')
+@patch('app.calculator.Path.exists', return_value=True)
+def test_load_history_success(mock_exists, mock_read_csv, calculator):
+    # Mock CSV data: 'operation' column should contain the short names (e.g., "add")
+    mock_read_csv.return_value = pd.DataFrame({
+        'operation': ['add', 'subtract'],
+        'operand1': ['2', '10'],
+        'operand2': ['3', '5'],
+        'result': ['5', '5'],
+        'timestamp': [datetime.datetime.now().isoformat(), datetime.datetime.now().isoformat()]
+    })
+    
+    calculator.load_history() 
+    
+    assert len(calculator.history) == 2
+    assert calculator.history[0].operation_name == "add"
+    assert calculator.history[0].operand1 == Decimal("2")
+    assert calculator.history[0].operand2 == Decimal("3")
+    assert calculator.history[0].result == Decimal("5")
+
+    assert calculator.history[1].operation_name == "subtract"
+    assert calculator.history[1].operand1 == Decimal("10")
+    assert calculator.history[1].operand2 == Decimal("5")
+    assert calculator.history[1].result == Decimal("5")
+
+    assert len(calculator.undo_stack) == 1 
+    assert calculator.undo_stack[0].history == calculator.history 
+    assert calculator.redo_stack == []
+
+
+@patch('app.calculator.pd.read_csv', side_effect=Exception("Load error!"))
+@patch('app.calculator.Path.exists', return_value=True)
+def test_load_history_failure(mock_exists, mock_read_csv, calculator):
+    with pytest.raises(OperationError, match="Failed to load history: Load error!"):
+        calculator.load_history()
+    mock_read_csv.assert_called_once()
+    assert calculator.history == [] 
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+
+@patch('app.calculator.Path.exists', return_value=False)
+def test_load_history_no_file(mock_exists, calculator):
+    calculator.load_history()
+    assert calculator.history == [] 
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+
+
+def test_clear_history(calculator):
+    calculator.set_operation('add')
+    calculator.perform_operation(2, 3)
+    calculator.set_operation('subtract')
+    calculator.perform_operation(5, 1)
+
+    assert len(calculator.history) == 2
+    assert len(calculator.undo_stack) > 0
+
+    calculator.clear_history()
+    assert calculator.history == []
+    assert calculator.undo_stack == []
+    assert calculator.redo_stack == []
+
+# REPL tests are handled in tests/test_calculator_repl.py

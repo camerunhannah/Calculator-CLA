@@ -1,4 +1,4 @@
-# tests/test_calculator_repl.py (Full Code - Final Version)
+# tests/test_calculator_repl.py 
 
 import pytest
 import sys
@@ -7,7 +7,7 @@ from unittest.mock import MagicMock, patch, PropertyMock
 from decimal import Decimal
 from pathlib import Path
 
-# Import the actual classes we are testing or mocking their dependencies
+
 from app.calculator_repl import calculator_repl
 from app.calculator import Calculator
 from app.calculator_config import CalculatorConfig
@@ -15,7 +15,7 @@ from app.exceptions import OperationError, ValidationError
 from app.history import AutoSaveObserver, LoggingObserver # Import observers for mocking purposes
 from app.operations import OperationFactory
 
-# --- Fixtures for common mocks ---
+
 
 @pytest.fixture
 def mock_calculator(mocker):
@@ -421,8 +421,7 @@ def test_repl_calc_command_cancel_second_number(capsys, mock_input, mock_sys_exi
 
     captured = capsys.readouterr()
 
-  
-
+   
     # Assert the cancellation message appears
     assert "Operation cancelled." in captured.out 
 
