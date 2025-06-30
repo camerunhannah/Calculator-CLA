@@ -1,4 +1,4 @@
- Advanced Python Calculator
+🚀 Advanced Python Calculator
 This project develops a robust command-line calculator application built with Python. It features a wide range of arithmetic operations, a history management system with undo/redo capabilities, flexible configuration via environment variables, comprehensive logging, and auto-saving of calculations. The application leverages several design patterns to ensure a modular, maintainable, and scalable codebase, including Factory, Memento, and Observer patterns. It also boasts high test coverage and is set up for Continuous Integration with GitHub Actions.
 
 ✨ Features
@@ -27,6 +27,8 @@ Data Persistence: Saves and loads calculation history to/from CSV files using pa
 High Test Coverage: Achieves 90% test coverage or better using pytest and pytest-cov to ensure reliability.
 
 Continuous Integration (CI): Configured with GitHub Actions to automatically run tests and check coverage on every push and pull request.
+
+Color-Coded Outputs: Enhances readability and user experience in the command-line interface with distinct colors for prompts, results, errors, and informational messages using the colorama library.
 
 📦 Project Setup
 Follow these steps to get the calculator application up and running on your local machine.
@@ -295,6 +297,8 @@ Error Handling: Custom exceptions (OperationError, ValidationError, Configuratio
 
 Modular Design: The codebase is organized into distinct modules and classes (e.g., Calculation, Calculator, Operation, OperationFactory, CalculatorConfig, HistoryObserver) following principles like the Single Responsibility Principle and Dependency Inversion.
 
+Color-Coded Output: The command-line interface uses colors (powered by colorama) to enhance readability, distinguish prompts, results, and various types of messages, making the user experience more intuitive and engaging.
+
 🔥 Useful Commands Cheat Sheet
 Action
 
@@ -370,3 +374,4 @@ Pytest-Cov Documentation
 Python-dotenv Documentation
 
 Pandas Documentation
+
